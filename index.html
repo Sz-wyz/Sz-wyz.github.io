@@ -27,7 +27,148 @@ var CONFIG = {
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">Categories</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Szwyz's Blog</div><div class="header-banner-info__subtitle">蚍蜉撼树</div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/06/29/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88%E6%9C%AA%E5%AE%8C%EF%BC%89/">设计模式（未完）</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-06-29</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2020-06-29</span></span></div></header><div class="post-body"><div class="post-excerpt">
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">Categories</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Szwyz's Blog</div><div class="header-banner-info__subtitle">蚍蜉撼树</div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/07/01/C#%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E6%9C%AA%E5%AE%8C%EF%BC%89/">C#学习笔记（未完）</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-07-01</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2020-07-01</span></span></div></header><div class="post-body"><div class="post-excerpt">
+        <h1 id="C"   >
+          <a href="#C" class="heading-link"><i class="fas fa-link"></i></a>C#</h1>
+      
+        <h2 id="编译"   >
+          <a href="#编译" class="heading-link"><i class="fas fa-link"></i></a>编译</h2>
+      <ul>
+<li>C#编译器是把.cs结尾的源码文件编译成Assembly</li>
+<li>Assembly是.NET Core里的包装和部署的单元</li>
+<li>Assembly可以是应用程序，也可以是库<ul>
+<li>.exe</li>
+<li>.dll</li>
+</ul>
+</li>
+</ul>
+
+        <h3 id="Null附加课程"   >
+          <a href="#Null附加课程" class="heading-link"><i class="fas fa-link"></i></a>Null附加课程</h3>
+      
+        <h4 id="可空值-类型"   >
+          <a href="#可空值-类型" class="heading-link"><i class="fas fa-link"></i></a>可空值 类型</h4>
+      <ul>
+<li>可空值类型是System.Nullable&lt;T&gt;这个struct的实例</li>
+<li>可空值类型除了可以正确的表示其底层数据类型的范围，还可以表示null</li>
+</ul>
+<p>例如 bool类型有True和False 而 Nullable&lt;bool&gt;有True、False和null</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">static void Main(string[] args)</span><br><span class="line">	&#123;</span><br><span class="line">    	string str &#x3D; &quot;dsafdsafdsfsd&quot;;</span><br><span class="line">        int? indexOfM &#x3D; null; &#x2F;&#x2F; 可空类型</span><br><span class="line">        Nullable&lt;int&gt; indexOFM &#x3D; null; &#x2F;&#x2F; 相当于这个</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></div></figure>
+
+
+
+
+        <h4 id="Null和空，空白string"   >
+          <a href="#Null和空，空白string" class="heading-link"><i class="fas fa-link"></i></a>Null和空，空白string</h4>
+      <ul>
+<li>string name = “Nick”;</li>
+<li>string name = null;</li>
+<li>string name = “”;</li>
+<li>string name = “ “;</li>
+</ul>
+<p><strong>判断Null和空，空白string</strong></p>
+<ul>
+<li>if(name==null){…}</li>
+<li>if(string.isNullOrEmpty(name)){…}</li>
+<li>if(string.isNullOrWhiteSpace(name)){…}</li>
+</ul>
+<p><strong>Nullable&lt;T&gt;的常用属性和方法</strong></p>
+<ul>
+<li>.HasValue</li>
+<li>.Value // 底层值类型的值（不常用）</li>
+<li>.GetValueOrDefault() // 底层值类型的值或该类型的默认值</li>
+<li>.GetValueOrDefault(默认值) // 底层值类型的值或指定的默认值</li>
+</ul>
+<p><strong>Nullable&lt;T&gt;转换</strong></p>
+<ul>
+<li>T-&gt;Nullable&lt;T&gt;隐式转换</li>
+<li>Nullable&lt;T&gt;-&gt;T显式转换</li>
+</ul>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">static void Main(string[] args)</span><br><span class="line">    &#123;</span><br><span class="line">        &#123;</span><br><span class="line">            int i &#x3D; 3;</span><br><span class="line">            int? j &#x3D; i; &#x2F;&#x2F; 隐式转换</span><br><span class="line">            Console.WriteLine(j);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &#123;</span><br><span class="line">            int? i &#x3D; 3;</span><br><span class="line">            int j &#x3D; (int)i; &#x2F;&#x2F; 显式转换</span><br><span class="line">            Console.WriteLine(j);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></div></figure>
+
+
+
+
+
+
+        <h2 id="在C-中创建类型"   >
+          <a href="#在C-中创建类型" class="heading-link"><i class="fas fa-link"></i></a>在C#中创建类型</h2>
+      <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">class YourClassName</span><br><span class="line">&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+<ul>
+<li>在class关键字之前：类特性（Attribute）和类修饰符。非嵌套的类修饰符有：public、internal、abstract、sealed、unsafe和partial</li>
+<li>在{}内：类成员（方法、属性、索引器、事件、字段、构造器、重载运算符、嵌套类型和终结器）</li>
+</ul>
+<p><strong>字段是类或者结构体中的变量成员</strong></p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">class Octopus</span><br><span class="line">&#123;</span><br><span class="line">    string name;</span><br><span class="line">    public int Age &#x3D; 10;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+<p>字段可以以下修饰符进行修饰：</p>
+<ul>
+<li>静态修饰符：static</li>
+<li>访问权限修饰符：public internal private protected</li>
+<li>继承修饰符：new</li>
+<li>不安全代码修饰符：unsafe</li>
+<li>只读修饰符：readonly //防止字段在构造后进行变更</li>
+<li>线程访问修饰符：volatile</li>
+</ul>
+<p><strong>方法</strong></p>
+<p>方法通过指定的输出类型将输出数据返回给调用者，此外，方法还可以通过ref/out参数向调用者返回输出数据。</p>
+<p>方法的签名在一个类中必须是唯一的。方法的签名由它的名字和一定顺序的参数类型（但不包含参数名和返回值类型）组成。</p>
+<p><strong>注意：</strong>方法的返回值类型和params修饰符不属于方法签名的一部分</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">void Foo(int x)&#123;...&#125;</span><br><span class="line">float Foo(int x)&#123;...&#125; &#x2F;&#x2F; Compile-time error</span><br><span class="line"></span><br><span class="line">void Goo(int[] x)&#123;...&#125;</span><br><span class="line">void Goo(params int[] x)&#123;...&#125; &#x2F;&#x2F; Compile-time error</span><br></pre></td></tr></table></div></figure>
+
+
+
+<p>方法可以用一下修饰符修饰：</p>
+<ul>
+<li>静态修饰符：static</li>
+<li>访问权限修饰符：public internal private protected</li>
+<li>继承修饰符：new virtual abstract override sealed</li>
+<li>部分方法修饰符：partial</li>
+<li>非托管代码修饰符：unsafe extern</li>
+<li>异步代码修饰符：async</li>
+</ul>
+
+        <h3 id="expression-bodied方法（C-6"   >
+          <a href="#expression-bodied方法（C-6" class="heading-link"><i class="fas fa-link"></i></a>expression-bodied方法（C#6)</h3>
+      <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">int Foo(int x) &#123; return x * 2; &#125; &#x2F;&#x2F;仅由一个表达式构成的方法</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;可用双箭头来却带花括号和return</span><br><span class="line">int Foo(int x) &#x3D;&gt; x*2;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;void返回类型也可支持</span><br><span class="line">void Foo(int x) &#x3D;&gt; Console.WriteLine(x);</span><br></pre></td></tr></table></div></figure>
+
+
+
+
+        <h3 id="按值传递和按引用传递"   >
+          <a href="#按值传递和按引用传递" class="heading-link"><i class="fas fa-link"></i></a>按值传递和按引用传递</h3>
+      <p>参数按值传递还是按引用传递也是方法签名的一部分。例如Foo(int)和Foo(ref int)或者Foo(out int)可以出现在一个类中。但是Foo(ref int)和Foo(out int)不能同时出现在一个类中。</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">void Foo(int x)&#123;...&#125;</span><br><span class="line">void Foo(ref int x)&#123;...&#125; &#x2F;&#x2F; OK so far</span><br><span class="line">void Foo(out int x)&#123;...&#125; &#x2F;&#x2F; Compile-time error</span><br></pre></td></tr></table></div></figure>
+
+
+
+        <h3 id="局部方法（C-7）"   >
+          <a href="#局部方法（C-7）" class="heading-link"><i class="fas fa-link"></i></a>局部方法（C#7）</h3>
+      <p>C#7开始允许一个方法中定义另外一个方法。局部方法不能用static修饰</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">void WriteCubes()</span><br><span class="line">&#123;</span><br><span class="line">	Console.WriteLine(Cube(3));</span><br><span class="line">	</span><br><span class="line">	int Cube(int value) &#x3D;&gt; value*value*value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+        <h3 id="实例构造器（构造函数）"   >
+          <a href="#实例构造器（构造函数）" class="heading-link"><i class="fas fa-link"></i></a>实例构造器（构造函数）</h3>
+      <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class Panda</span><br><span class="line">&#123;</span><br><span class="line">	string name;</span><br><span class="line">	public Panda(string n) &#x2F;&#x2F; 构造器名和返回值只能和封装类的类型相同</span><br><span class="line">	&#123;</span><br><span class="line">		name &#x3D; n;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Panda p &#x3D; new Panda(&quot;petey&quot;);</span><br></pre></td></tr></table></div></figure>
+<p>实例构造器支持一下的修饰符：</p>
+<ul>
+<li>访问权限修饰符：public internal private protected</li>
+<li>非托管代码修饰符：unsafe extern</li>
+</ul>
+<p>也可这么写：public Panda(string n) =&gt; name = n;<br><strong>构造器的重载</strong>：为了避免代码重复，构造器可以用this关键字来调用<strong>另一个构造器</strong></p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">using System;</span><br><span class="line">public class Wine</span><br><span class="line">&#123;</span><br><span class="line">	public decimal Price;</span><br><span class="line">	public int Year;</span><br><span class="line">	public Wine(decimal price)&#123; Price &#x3D; price;&#125;</span><br><span class="line">	public Wine(decimal price,int year):this (price)&#123;Year &#x3D; year;&#125;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F; 还可以向另一个构造器传递表达式</span><br><span class="line">	public Wine(decimal price,DateTime year):this (price,year.Year)&#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+<p><strong>非公有构造器</strong> ：在C#中，构造器不添加修饰符，则默认是private类型的。非共有构造器通常用在单例设计中</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class Class1</span><br><span class="line">&#123;</span><br><span class="line">	Class1()&#123;&#125; &#x2F;&#x2F; private constructro</span><br><span class="line">	public static Class1 Create(...)&#123;...&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="解构器（析构函数）"   >
+          <a href="#解构器（析构函数）" class="heading-link"><i class="fas fa-link"></i></a>解构器（析构函数）</h3>
+      <p>解析方法的名字必须是Deconstruct,并且拥有一个或多个out参数。</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Rectangle</span><br><span class="line">&#123;</span><br><span class="line">    public readonly float Width, Height;</span><br><span class="line">    public Rectangle(float width, float height)</span><br><span class="line">    &#123;</span><br><span class="line">        Width &#x3D; width;</span><br><span class="line">        Height &#x3D; height;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void Deconstruct(out float width, out float height)</span><br><span class="line">    &#123;</span><br><span class="line">        width &#x3D; Width;</span><br><span class="line">        height &#x3D; Height;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+<p><strong>如果需要调用解构器，则需使用如下的语法：</strong></p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var rect &#x3D; new Rectangle(3, 4);</span><br><span class="line">(float width, float height) &#x3D; rect; &#x2F;&#x2F; Deconstruction</span><br><span class="line">System.Console.WriteLine(width + &quot; &quot; + height);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 相当于</span><br><span class="line">float width,height;</span><br><span class="line">rec.Deconstruct(out width,out height);</span><br></pre></td></tr></table></div></figure>
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/06/29/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88%E6%9C%AA%E5%AE%8C%EF%BC%89/">设计模式（未完）</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-06-29</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2020-06-29</span></span></div></header><div class="post-body"><div class="post-excerpt">
         <h1 id="设计模式"   >
           <a href="#设计模式" class="heading-link"><i class="fas fa-link"></i></a>设计模式</h1>
       
@@ -47,7 +188,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 
 
 
-</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/06/28/vscode%E9%85%8D%E7%BD%AE/">vscode配置</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-06-28</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2020-06-29</span></span></div></header><div class="post-body"><div class="post-excerpt">
+</div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/06/28/vscode%E9%85%8D%E7%BD%AE/">vscode配置</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-06-28</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2020-06-30</span></span></div></header><div class="post-body"><div class="post-excerpt">
         <h1 id="VSCode配置"   >
           <a href="#VSCode配置" class="heading-link"><i class="fas fa-link"></i></a>VSCode配置</h1>
       
@@ -58,6 +199,10 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
         <h4 id="图标主题"   >
           <a href="#图标主题" class="heading-link"><i class="fas fa-link"></i></a>图标主题</h4>
       <p>ctrl+shift+p 后输入Preferences File Icon Theme进行选择</p>
+
+        <h4 id="生成构造函数"   >
+          <a href="#生成构造函数" class="heading-link"><i class="fas fa-link"></i></a>生成构造函数</h4>
+      <p>ctor</p>
 
         <h3 id="字号等设置"   >
           <a href="#字号等设置" class="heading-link"><i class="fas fa-link"></i></a>字号等设置</h3>
@@ -201,4 +346,4 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
       <figure class="highlight bash"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></div></figure>
 
 <p>More info: <span class="exturl"><a class="exturl__link"   href="https://hexo.io/docs/one-command-deployment.html"  target="_blank" rel="noopener">Deployment</a><span class="exturl__icon"><i class="fas fa-external-link-alt"></i></span></span></p>
-</div></div></article></section><nav class="paginator"><div class="paginator-inner"><span class="page-number current">1</span></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/L.png" alt="avatar"></div><p class="sidebar-ov-author__text">Szwyz's Blog</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/Sz-wyz" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="1830413177@qq.com" target="_blank" rel="noopener" data-popover="social.email" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fas fa-envelope"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">4</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">0</div><div class="sidebar-ov-state-item__name">Categories</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-bolt"></i></span><span>Lhn</span></div><div><span>Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a></span><span> v4.2.1</span><span class="footer__devider">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.0.1</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.0.1"></script><script src="/js/stun-boot.js?v=2.0.1"></script><script src="/js/scroll.js?v=2.0.1"></script><script src="/js/header.js?v=2.0.1"></script><script src="/js/sidebar.js?v=2.0.1"></script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body></html>
+</div></div></article></section><nav class="paginator"><div class="paginator-inner"><span class="page-number current">1</span></div></nav></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><section class="sidebar-toc hide"></section><!-- ov = overview--><section class="sidebar-ov"><div class="sidebar-ov-author"><div class="sidebar-ov-author__avatar"><img class="sidebar-ov-author__avatar_img" src="/images/icons/L.png" alt="avatar"></div><p class="sidebar-ov-author__text">Szwyz's Blog</p></div><div class="sidebar-ov-social"><a class="sidebar-ov-social-item" href="https://github.com/Sz-wyz" target="_blank" rel="noopener" data-popover="Github" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fab fa-github"></i></span></a><a class="sidebar-ov-social-item" href="1830413177@qq.com" target="_blank" rel="noopener" data-popover="social.email" data-popover-pos="up"><span class="sidebar-ov-social-item__icon"><i class="fas fa-envelope"></i></span></a></div><div class="sidebar-ov-state"><a class="sidebar-ov-state-item sidebar-ov-state-item--posts" href="/archives/"><div class="sidebar-ov-state-item__count">5</div><div class="sidebar-ov-state-item__name">Archives</div></a><a class="sidebar-ov-state-item sidebar-ov-state-item--categories" href="/categories/"><div class="sidebar-ov-state-item__count">0</div><div class="sidebar-ov-state-item__name">Categories</div></a></div><div class="sidebar-ov-cc"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" target="_blank" rel="noopener" data-popover="Creative Commons" data-popover-pos="up"><img src="/images/cc-by-nc-sa.svg"></a></div></section></aside></div><div class="clearfix"></div></div></main><footer class="footer" id="footer"><div class="footer-inner"><div><span>Copyright © 2020</span><span class="footer__icon"><i class="fas fa-bolt"></i></span><span>Lhn</span></div><div><span>Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a></span><span> v4.2.1</span><span class="footer__devider">|</span><span>Theme - <a href="https://github.com/liuyib/hexo-theme-stun/" title="Stun" target="_blank" rel="noopener">Stun</a></span><span> v2.0.1</span></div></div></footer><div class="loading-bar" id="loading-bar"><div class="loading-bar__progress"></div></div><div class="back2top" id="back2top"><span class="back2top__icon"><i class="fas fa-rocket"></i></span></div></div><script src="https://cdn.jsdelivr.net/npm/jquery@v3.4.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@1.5.2/velocity.ui.min.js"></script><script src="/js/utils.js?v=2.0.1"></script><script src="/js/stun-boot.js?v=2.0.1"></script><script src="/js/scroll.js?v=2.0.1"></script><script src="/js/header.js?v=2.0.1"></script><script src="/js/sidebar.js?v=2.0.1"></script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false});</script></body></html>
