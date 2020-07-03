@@ -27,7 +27,7 @@ var CONFIG = {
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">Categories</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Szwyz's Blog</div><div class="header-banner-info__subtitle">蚍蜉撼树</div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/07/01/C#%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E6%9C%AA%E5%AE%8C%EF%BC%89/">C#学习笔记（未完）</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-07-01</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2020-07-01</span></span></div></header><div class="post-body"><div class="post-excerpt">
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">Categories</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Szwyz's Blog</div><div class="header-banner-info__subtitle">蚍蜉撼树</div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/07/01/C#%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E6%9C%AA%E5%AE%8C%EF%BC%89/">C#学习笔记（未完）</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-07-01</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2020-07-02</span></span></div></header><div class="post-body"><div class="post-excerpt">
         <h1 id="C"   >
           <a href="#C" class="heading-link"><i class="fas fa-link"></i></a>C#</h1>
       
@@ -225,7 +225,70 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
           <a href="#常量" class="heading-link"><i class="fas fa-link"></i></a>常量</h3>
       <p>一个值不可以改变的静态字段 const关键字声明，声明时必须有初始值。</p>
 <p><font color=red>注意：</font></p>
-<p>与const不同的是，static readonly字段的好处在于当提供给别的程序集时，可以在后续版本中更新其数值。</p>
+<p>与const不同的是，static readonly字段的好处在于当提供给别的程序集时，可以在后续版本中更新其数值。假设程序集X提供了一个如下的常量：</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public const decimal ProgramVersion &#x3D; 2.3;</span><br></pre></td></tr></table></div></figure>
+
+<p>如果程序集Y引用了程序集X并使用了这个常量，那么值2.3将在编译时固定在程序集Y中。这意味着如果X后来重新编译将其值更改为2.4，那么Y仍将使用旧值2.3直至Y重新编译。而static readonly字段则不存在这个问题。</p>
+
+        <h3 id="静态构造器（静态构造函数）"   >
+          <a href="#静态构造器（静态构造函数）" class="heading-link"><i class="fas fa-link"></i></a>静态构造器（静态构造函数）</h3>
+      <p>每个类型的静态构造器只会执行一次，而不是每个实例执行一次。一个类型只能定义一个静态  构造器，名称必须和类名同名，且没有参数。在类型使用之前的一瞬间，编译器会自动调用类型的静态构造函数：实例化一个类型或者访问类型的一个静态成员。<br>静态构造器只支持两种修饰符：unsafe和extern</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">class Test</span><br><span class="line">&#123;</span><br><span class="line">	static Test() &#123; Console.WriteLine(&quot;Type Initialized&quot;);&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+<p><strong>静态类：</strong>标记为static，其成员必须全是静态的，不可以有子类。比如System.Console和System.Math</p>
+
+        <h3 id="终结器"   >
+          <a href="#终结器" class="heading-link"><i class="fas fa-link"></i></a>终结器</h3>
+      <p>Finalizer是class专有的一种方法，在GC回收未引用对象的内存之前运行。</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class Class1</span><br><span class="line">&#123;</span><br><span class="line">    ~Class1</span><br><span class="line">    &#123;</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+<p>事实上，这是C#语言重写Object类的Finalize方法的语法。编译器生成的</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">protected override void Finalize()</span><br><span class="line">&#123;</span><br><span class="line">    ...</span><br><span class="line">        base.Finalize();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+<p>C#7可以这么写 ~Class1() =&gt; Console.WriteLine(“Finalizing”);</p>
+
+        <h3 id="局部-分布类型"   >
+          <a href="#局部-分布类型" class="heading-link"><i class="fas fa-link"></i></a>局部/分布类型</h3>
+      <ul>
+<li><p>允许一个类型的定义分布在多个地方（文件）</p>
+</li>
+<li><p>典型应用：一个类的一部分是自动生成的，另一部分需要手动写代码</p>
+</li>
+</ul>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; PaymentFormGen.cs - auto-generated</span><br><span class="line">partial class PaymentForm &#123;...&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; PaymentFormGen.cs - hand-authored</span><br><span class="line">partial class PaymentForm &#123;...&#125;</span><br></pre></td></tr></table></div></figure>
+
+<p><strong>注意</strong>    编译器无法保证各分布类的字段的初始化顺序</p>
+<p><strong>局部/分部方法：</strong></p>
+<p>自动生成的分布类里可以有partial method，通常作为”钩子“使用，在另一部分的partial method中，可以对这个方法进行定义。</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">partial class PaymentForm &#x2F;&#x2F; In auto-generated file</span><br><span class="line">&#123;</span><br><span class="line">    partial void ValidatePayment (decimal amount);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">partial class PaymentForm &#x2F;&#x2F; In hand-authored file</span><br><span class="line">&#123;</span><br><span class="line">    partial void ValidatePayment (decimal amount)</span><br><span class="line">    &#123;</span><br><span class="line">        if (amount &gt; 100) ...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+<ul>
+<li>partial method 由两部分组成：定义和实现 定义部分通常是生成的 实现部分通常是手动编写的</li>
+<li>partial method 必须是void，并且隐式private的</li>
+</ul>
+
+        <h3 id="nameof运算符"   >
+          <a href="#nameof运算符" class="heading-link"><i class="fas fa-link"></i></a>nameof运算符</h3>
+      <p>返回任何符号（类型、成员、变量…）的名字（string） 利于重构</p>
+<p>String name = nameof (count);</p>
+
+        <h3 id="类型转换和引用转换"   >
+          <a href="#类型转换和引用转换" class="heading-link"><i class="fas fa-link"></i></a>类型转换和引用转换</h3>
+      <ul>
+<li>一个对象的引用可以隐式的转换到其父类的引用（向上转换）</li>
+<li>想转换到子类的引用则需要显式转换（向下转换）</li>
+<li>引用转换：创建了一个新的引用，它也指向同一个对象</li>
+</ul>
+<p><strong>向上转换：</strong></p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Stock msft &#x3D; new Stock();</span><br><span class="line">Asset a &#x3D; msft; &#x2F;&#x2F; Asset是Stock的父类 变量a仍然指向同一个Stock对象 msft也指向它</span><br></pre></td></tr></table></div></figure>
+
+<p><strong>向下转换：</strong></p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Stock msft &#x3D; new Stock();</span><br><span class="line">Asset a &#x3D; msft; &#x2F;&#x2F; 向上转换</span><br><span class="line">Stock s &#x3D; (Stock)a; &#x2F;&#x2F; 向下转换 需要显式转换</span><br><span class="line">Console.WriteLine(s.SharesOwned); &#x2F;&#x2F; &lt;No error&gt;</span><br><span class="line">Console.WriteLine(s &#x3D;&#x3D;a ); &#x2F;&#x2F; True</span><br><span class="line">Console.WriteLine(s &#x3D;&#x3D; msft ); &#x2F;&#x2F; True</span><br></pre></td></tr></table></div></figure>
+
+
+
+
+
 </div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/06/29/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88%E6%9C%AA%E5%AE%8C%EF%BC%89/">设计模式（未完）</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-06-29</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2020-06-29</span></span></div></header><div class="post-body"><div class="post-excerpt">
         <h1 id="设计模式"   >
           <a href="#设计模式" class="heading-link"><i class="fas fa-link"></i></a>设计模式</h1>
