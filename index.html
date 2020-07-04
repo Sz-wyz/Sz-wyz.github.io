@@ -27,7 +27,7 @@ var CONFIG = {
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">Categories</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Szwyz's Blog</div><div class="header-banner-info__subtitle">蚍蜉撼树</div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/07/01/C#%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E6%9C%AA%E5%AE%8C%EF%BC%89/">C#学习笔记（未完）</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-07-01</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2020-07-02</span></span></div></header><div class="post-body"><div class="post-excerpt">
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">Categories</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Szwyz's Blog</div><div class="header-banner-info__subtitle">蚍蜉撼树</div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/07/01/C#%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E6%9C%AA%E5%AE%8C%EF%BC%89/">C#学习笔记（未完）</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-07-01</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2020-07-04</span></span></div></header><div class="post-body"><div class="post-excerpt">
         <h1 id="C"   >
           <a href="#C" class="heading-link"><i class="fas fa-link"></i></a>C#</h1>
       
@@ -282,13 +282,197 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <p><strong>向上转换：</strong></p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Stock msft &#x3D; new Stock();</span><br><span class="line">Asset a &#x3D; msft; &#x2F;&#x2F; Asset是Stock的父类 变量a仍然指向同一个Stock对象 msft也指向它</span><br></pre></td></tr></table></div></figure>
 
-<p><strong>向下转换：</strong></p>
+<p><strong>向下转换：（从父类的引用创建出子类的引用）</strong></p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Stock msft &#x3D; new Stock();</span><br><span class="line">Asset a &#x3D; msft; &#x2F;&#x2F; 向上转换</span><br><span class="line">Stock s &#x3D; (Stock)a; &#x2F;&#x2F; 向下转换 需要显式转换</span><br><span class="line">Console.WriteLine(s.SharesOwned); &#x2F;&#x2F; &lt;No error&gt;</span><br><span class="line">Console.WriteLine(s &#x3D;&#x3D;a ); &#x2F;&#x2F; True</span><br><span class="line">Console.WriteLine(s &#x3D;&#x3D; msft ); &#x2F;&#x2F; True</span><br></pre></td></tr></table></div></figure>
 
+<p>需要显式转换，因为可能会失败，如果向下转换失败，那么就会抛出InvalidCastException（属于运行时类型检查）</p>
+<p><strong>AS操作符：</strong></p>
+<p>as操作符会执行向下转换，如果转换失败，不会抛出异常，值会变成null</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Asset a &#x3D; new Asset(); &#x2F;&#x2F; Asset是父类 Stock继承自Stock</span><br><span class="line">Stock s &#x3D; a as Stock; &#x2F;&#x2F; s is null;no exception thrown</span><br></pre></td></tr></table></div></figure>
+
+<p>as操作符无法做自定义转换：long x = 3 as long；// Compile-time error</p>
+<p><strong>IS操作符：</strong><br>is操作符会检验引用的转换是否成功。换句话说，判断对象是否派生于某个类（或者实现了某个接口）<br>通常用于向下转换前的验证：</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if (a is Stock)</span><br><span class="line">	Console.WriteLine(((Stock)a).SharesOwned);</span><br></pre></td></tr></table></div></figure>
+<p>C#7里，在使用is操作符的时候，可以引用一个变量</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if (a is Stock s) &#x2F;&#x2F; 如果a是stock类型，那么就将a赋值为s</span><br><span class="line">	Console.WriteLine(s.SharesOwned);</span><br></pre></td></tr></table></div></figure>
+
+        <h3 id="Virtual函数成员"   >
+          <a href="#Virtual函数成员" class="heading-link"><i class="fas fa-link"></i></a>Virtual函数成员</h3>
+      <p>标记为virtual的函数可以被子类重写，包括方法、属性、索引器、事件</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class Asset</span><br><span class="line">&#123;</span><br><span class="line">	public string Name;</span><br><span class="line">	public virtual decimal Liability &#x3D;&gt; 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+<p><strong>之后在子类中就可以用override修饰符进行重写：</strong></p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class House:Asset</span><br><span class="line">&#123;</span><br><span class="line">	public decimal Mortgage;</span><br><span class="line">	public override decimal Liability &#x3D;&gt; Mortgage;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+<p>virtual方法和重写方法的签名、返回类型、可访问程度必须是一样的。重写方法里使用base关键字可以调用父类的实现。</p>
+
+        <h3 id="抽象类和抽象成员"   >
+          <a href="#抽象类和抽象成员" class="heading-link"><i class="fas fa-link"></i></a>抽象类和抽象成员</h3>
+      <ul>
+<li>使用abstract声明的类是抽象类</li>
+<li>抽象类不可以被实例化，只有其具体的子类才可以实例化</li>
+<li>抽象类可以定义抽象成员</li>
+<li>抽象成员和virtual成员很像，但是不提供具体的实现。子类必须提供实现，除非子类也是抽象的。<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public abstract class Asset</span><br><span class="line">&#123;</span><br><span class="line">	public abstract decimal NetValue&#123; get;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Stock:Asset</span><br><span class="line">&#123;</span><br><span class="line">	public long SharesOwned;</span><br><span class="line">	public decimal CurrentPrice;</span><br><span class="line">	</span><br><span class="line">	&#x2F;&#x2F;Override like a virtual method</span><br><span class="line">	public override decimal NetValue &#x3D;&gt; CurrentPrice * SharesOwned;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure></li>
+</ul>
+<p><strong>隐藏被继承的成员：</strong><br>父类和子类可以定义相同的成员（编译器会发出警告）：</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">public class A &#123; public int counter &#x3D; 1; &#125;</span><br><span class="line">public class B:A &#123;public int Counter &#x3D; 2; &#125;</span><br></pre></td></tr></table></div></figure>
+<p>如果想故意隐藏父类的成员，可以在子类的成员前面加上new修饰符（抑制编译器的警告）</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">public class A &#123; public int counter &#x3D; 1; &#125;</span><br><span class="line">public class B:A &#123;public new int Counter &#x3D; 2; &#125;</span><br></pre></td></tr></table></div></figure>
+
+<p><strong>sealed关键字：</strong><br>针对重写的成员，可以使用sealed关键字把它密封起来，防止被其他子类重写。sealed也可以密封整个类。<br>public sealed override decimal Liability { get {return Mortgage;} }</p>
+<p><strong>base关键字：</strong><br>base主要用于从子类访问父类被重写的函数、调用父类的构造函数</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public class House : Asset</span><br><span class="line">&#123;</span><br><span class="line">	public override decimal Liability &#x3D;&gt; base.Liability + Mortgage;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="构造函数和继承"   >
+          <a href="#构造函数和继承" class="heading-link"><i class="fas fa-link"></i></a>构造函数和继承</h3>
+      <ul>
+<li>子类必须声明自己的构造函数</li>
+<li>从子类可访问父类的构造函数，但不是自动继承的</li>
+<li>子类必须重新定义它想要暴露的构造函数<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class Baseclass</span><br><span class="line">&#123;</span><br><span class="line">    public int X;</span><br><span class="line">    public Baseclass() &#123; &#125;</span><br><span class="line">    public Baseclass(int x) &#123; this.X &#x3D; x; &#125;</span><br><span class="line">&#125;</span><br><span class="line">public class Subclass : Baseclass &#123; &#125;</span><br><span class="line"></span><br><span class="line">Subclass s &#x3D; new Subclass(123); &#x2F;&#x2F; 非法的</span><br></pre></td></tr></table></div></figure>
+
+</li>
+</ul>
+<p><strong>调用父类的构造函数需要使用base关键字，父类的构造函数肯定会先执行</strong></p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public class Subclass : Baseclass</span><br><span class="line">&#123;</span><br><span class="line">    public Subclass(int x) : base(x) &#123; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+<p>如果子类的构造函数里没有使用base关键字，那么父类的无参构造函数会被隐式的调用，如果父类没有无参构造函数，那么子类就必须在构造函数里使用base关键字</p>
+
+        <h3 id="object类型"   >
+          <a href="#object类型" class="heading-link"><i class="fas fa-link"></i></a>object类型</h3>
+      <p>object（System.Object）是所有类型的终极父类。所有类型都可以向上转换为object</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class Stack &#x2F;&#x2F; 一个可以容纳10个对象的栈的实现</span><br><span class="line">&#123;</span><br><span class="line">    int position;</span><br><span class="line">    object[] data &#x3D; new object[10];</span><br><span class="line">    public void Push(object obj) &#123; data[position] &#x3D; obj; &#125;</span><br><span class="line">    public object Pop() &#123; return data[--position]; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+<p>由于Stack类操作的对象是object，所以可以实现Push或Pop任意类型的实例的操作。</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Stack stack &#x3D; new Stack();</span><br><span class="line">stack.Push(&quot;sausage&quot;);</span><br><span class="line">string s &#x3D; (string)stack.Pop();</span><br><span class="line">Console.WriteLine(s);</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="装箱和拆箱"   >
+          <a href="#装箱和拆箱" class="heading-link"><i class="fas fa-link"></i></a>装箱和拆箱</h3>
+      <p>装箱是将值类型实例转换为引用类型实例的行为。</p>
+<p>拆箱正好相反，把那个对象转化为原来的值类型，需要显式的转换</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int x &#x3D; 9;</span><br><span class="line">object obj &#x3D; x; &#x2F;&#x2F; Box the int</span><br><span class="line"></span><br><span class="line">int y &#x3D; (int)obj; &#x2F;&#x2F; Unbox the int</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="GetType和typeof运算符"   >
+          <a href="#GetType和typeof运算符" class="heading-link"><i class="fas fa-link"></i></a>GetType和typeof运算符</h3>
+      <ul>
+<li>所有C#的类型在运行时都是以System.Type的实例来展现的</li>
+<li>两种方式可以获得System.Type对象：<ul>
+<li>在实例上调用GetType()方法</li>
+<li>在类型名上使用typeof操作符</li>
+</ul>
+</li>
+<li>GetType是在运行时被算出的</li>
+<li>typeof是在编译时被算出（静态）（当涉及到泛型类型参数时，它是由即时编译器来解析的）</li>
+</ul>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">using System;</span><br><span class="line"></span><br><span class="line">public class Point&#123;public int X,Y;&#125;</span><br><span class="line"></span><br><span class="line">class Test</span><br><span class="line">&#123;</span><br><span class="line">    static void Main()</span><br><span class="line">    &#123;</span><br><span class="line">        Point p &#x3D; new Point();</span><br><span class="line">        Console.WriteLine(p.GetType().Name); &#x2F;&#x2F; point</span><br><span class="line">        Console.WriteLine(typeof(Point).Name); &#x2F;&#x2F; point</span><br><span class="line">        Console.WriteLine(p.X.GetType().Name); &#x2F;&#x2F; Int32</span><br><span class="line">        Console.WriteLine(p.Y.GetType().FullName); &#x2F;&#x2F; System.Int32</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="结构体"   >
+          <a href="#结构体" class="heading-link"><i class="fas fa-link"></i></a>结构体</h3>
+      <p><strong>结构体的构建：</strong></p>
+<ul>
+<li>struct有一个无参的构造函数，但是不能对其重写，它会对字段进行按位归零操作</li>
+<li>当你定义struct构造函数的时候，必须显式的为每个字段赋值</li>
+<li>不可以有字段初始化器</li>
+</ul>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 错误的例子</span><br><span class="line">public struct Point</span><br><span class="line">&#123;</span><br><span class="line">    int x &#x3D; 1; &#x2F;&#x2F; 不可有初始化器</span><br><span class="line">    int y;</span><br><span class="line">    public Point() &#123;&#125; &#x2F;&#x2F; 不可以写无参的构造函数</span><br><span class="line">    public Point(int x ) &#123;this.x &#x3D; x;&#125; &#x2F;&#x2F; 没有对y进行初始化</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="访问权限修饰符"   >
+          <a href="#访问权限修饰符" class="heading-link"><i class="fas fa-link"></i></a>访问权限修饰符</h3>
+      <ul>
+<li>public，完全可访问。枚举类型的成员和接口的成员默认都是这个级别</li>
+<li>internal，当前程序集或友元程序集可访问，非嵌套类型的默认访问级别</li>
+<li>private，本类可访问。class和struct的成员的默认访问级别</li>
+<li>protected，本类或其子类可以访问</li>
+<li>protected internal，联合了protected和internal的访问级别</li>
+</ul>
+
+        <h3 id="友元程序集"   >
+          <a href="#友元程序集" class="heading-link"><i class="fas fa-link"></i></a>友元程序集</h3>
+      <p>通过添加System.Runtime.CompilerServices.InternalsVisibleTo这个Assembly的属性，并指定朋友Assembly的名字，就可以把internal的成员暴露给朋友Assembly</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[assembly: InternalsVisibleTo(&quot;Friend&quot;)]</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="接口"   >
+          <a href="#接口" class="heading-link"><i class="fas fa-link"></i></a>接口</h3>
+      <ul>
+<li>接口与class类似，但是它只为其成员提供了规格，而没有提供具体的实现</li>
+<li>接口的成员都是隐式抽象的</li>
+<li>一个class或者struct可以实现多个接口</li>
+</ul>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">public interface IEnumerator</span><br><span class="line">&#123;</span><br><span class="line">    bool MoveNext();</span><br><span class="line">    object Current &#123; get; &#125;</span><br><span class="line">    void Reset();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+<p><strong>接口成员都是隐式public的，不可以声明访问修饰符。</strong>注意，实现接口意味着它将为所有的成员提供public实现。</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">internal class Countdown : IEnumerator</span><br><span class="line">&#123;</span><br><span class="line">    int count &#x3D; 11;</span><br><span class="line">    public bool MoveNext() &#x3D;&gt; count--&gt;0;</span><br><span class="line">    public object Current &#x3D;&gt; count;</span><br><span class="line">    public void Reset() &#123; throw new NotSupportedException(); &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+<p><strong>接口的拓展（继承）：</strong></p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">public interface IUndoable &#123; void Undo(); &#125;</span><br><span class="line">public interface IRedoable:IUndoable &#123; void Redo(); &#125;</span><br></pre></td></tr></table></div></figure>
+
+<p><strong>显式的接口实现</strong></p>
+<p>实现多个接口的时候可能会造成成员签名的冲突。通过显式实现接口成员可以解决这个问题。</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">interface T1 &#123; void Foo(); &#125;</span><br><span class="line">interface T2 &#123; int Foo(); &#125;</span><br><span class="line"></span><br><span class="line">public class Widget:T1, T2</span><br><span class="line">&#123;</span><br><span class="line">    public void Foo</span><br><span class="line">    &#123;</span><br><span class="line">        Console.WriteLine(&quot;Widget&#39;s implementation of T1.Foo&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    int T2.Foo</span><br><span class="line">    &#123;</span><br><span class="line">        Console.WriteLine(&quot;Widget&#39;s implementation of T2.Foo&quot;);</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+<p><strong>显式接口实现：</strong></p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">using System;</span><br><span class="line"></span><br><span class="line">namespace ConsoleApp1</span><br><span class="line">&#123;</span><br><span class="line">    public interface IFoo</span><br><span class="line">    &#123;</span><br><span class="line">        void Do();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public interface IBar</span><br><span class="line">    &#123;</span><br><span class="line">        int Do();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public class Parent : IFoo, IBar</span><br><span class="line">    &#123;</span><br><span class="line">        public void Do() &#x3D;&gt; Console.WriteLine(&quot;Foo&quot;);</span><br><span class="line"></span><br><span class="line">        int IBar.Do() &#x2F;&#x2F; 显式的接口实现</span><br><span class="line">        &#123;</span><br><span class="line">            Console.WriteLine(&quot;Bar&quot;);</span><br><span class="line">            return 0;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    class Program</span><br><span class="line">    &#123;</span><br><span class="line">        static void Main(string[] args)</span><br><span class="line">        &#123;</span><br><span class="line">            Parent p &#x3D; new Parent();</span><br><span class="line">            p.Do(); &#x2F;&#x2F; Foo</span><br><span class="line">            ((IBar)p).Do(); &#x2F;&#x2F; Bar 接口的显式实现</span><br><span class="line">            ((IFoo)p).Do(); &#x2F;&#x2F; Foo</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+<p><strong>virtual的实现接口成员：</strong></p>
+<ul>
+<li>隐式实现的接口成员默认是sealed的</li>
+<li>如果想要重写的话，必须在基类中把成员标记为virtual或者abstract</li>
+</ul>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public interface IUndoable &#123; void Undo(); &#125;</span><br><span class="line"></span><br><span class="line">public class TextBox : IUndoable &#x2F;&#x2F; 接口实现的类默认是sealed的</span><br><span class="line">&#123;</span><br><span class="line">    public virtual void Undo() &#x3D;&gt; Console.WriteLine (&quot;TextBox.Undo&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class RichTextBox : TextBox &#x2F;&#x2F; 要重写就必须把基类的成员标记为virtual或者abstract</span><br><span class="line">&#123;</span><br><span class="line">    public override void Undo() &#x3D;&gt; Console.WriteLine(&quot;RichTextBox.Undo&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+<p><strong>在子类中重新实现接口：</strong></p>
+<p>子类可以重新实现父类已经实现的接口成员</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public interface IUndoable &#123; void Undo(); &#125;</span><br><span class="line"></span><br><span class="line">public class TextBox : IUndoable</span><br><span class="line">&#123;</span><br><span class="line">    void IUndoable.Undo() &#x3D;&gt; Console.WriteLine(&quot;TextBox.Undo&quot;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class RichTextBox : TextBox, IUndoable &#x2F;&#x2F; 重写</span><br><span class="line">&#123;</span><br><span class="line">    public void Undo() &#x3D;&gt; Console.WriteLine(&quot;RichTextBox.Undo&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+<p>从接口调用重新实现的成员时，调用的是子类的实现</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">RichTextBox r &#x3D; new RichTextBox();</span><br><span class="line">r.Undo; &#x2F;&#x2F; RichTextBox.Undo</span><br><span class="line">((IUndoable)r).Undo(); &#x2F;&#x2F; RichTextBox.Undo 此时已经被重写</span><br></pre></td></tr></table></div></figure>
+
+<p>假定RichTextBox定义不变，如果TextBox隐式实现Undo:</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public class TextBox : IUndoable</span><br><span class="line">&#123;</span><br><span class="line">    public void Undo() &#x3D;&gt; Console.WriteLine(&quot;TextBox.Undo&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+<p>那么就有了另外一种调用Undo方法</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">RichTextBox r &#x3D; new RichTextBox();</span><br><span class="line">r.Undo; &#x2F;&#x2F; RichTextBox.Undo</span><br><span class="line">((IUndoable)r).Undo(); &#x2F;&#x2F; RichTextBox.Undo</span><br><span class="line">((TextBox)r).Undo(); &#x2F;&#x2F; TextBox.Undo</span><br></pre></td></tr></table></div></figure>
+
+<p><strong>接口与装箱：</strong></p>
+<ul>
+<li>把struct转化为接口会导致装箱</li>
+<li>调用struct上隐式实现的成员不会导致装箱</li>
+</ul>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">interface I &#123; void Foo(); &#125;</span><br><span class="line">struct S : I &#123; public void Foo() &#123;&#125; &#125;</span><br><span class="line">...</span><br><span class="line">S s &#x3D; new S();</span><br><span class="line">s.Foo(); &#x2F;&#x2F; No boxing 调用struct上隐式实现的成员不会导致装箱</span><br><span class="line"></span><br><span class="line">I i &#x3D; s; &#x2F;&#x2F; Box occurs struct转化为接口会导致装箱</span><br></pre></td></tr></table></div></figure>
 
 
 
 
+        <h3 id="枚举和嵌套类型"   >
+          <a href="#枚举和嵌套类型" class="heading-link"><i class="fas fa-link"></i></a>枚举和嵌套类型</h3>
+      <p>枚举一个特殊的值类型，可以指定一组命名的数值常量。</p>
+<ul>
+<li>0,1,2,3会按照枚举成员的声明顺序自动赋值</li>
+<li>也可以指定其他的类型作为枚举的整数类型，例如byte<ul>
+<li>public enum BorderSide : byte { Left, Right, Top, Bottom }</li>
+</ul>
+</li>
+<li>也可以单独指定枚举成员对应的值<ul>
+<li>public enum BorderSide : byte { Left=1, Right=2, Top=10, Bottom=11 }</li>
+</ul>
+</li>
+<li>也可以指定集中某些成员的数值，未被赋值的成员将接着它前面已赋值成员的值递增</li>
+</ul>
+<p><strong>枚举类型转换：</strong></p>
+<p>枚举类型的实例可以与它对应的整数值相互显示转换：</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int i &#x3D; (int) BorderSide.Left;</span><br><span class="line">BorderSide side &#x3D; (BorderSide)i;</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="嵌套类型"   >
+          <a href="#嵌套类型" class="heading-link"><i class="fas fa-link"></i></a>嵌套类型</h3>
+      <p>嵌套类型是声明在另一个类型内部的类型。</p>
+<ul>
+<li>可访问外层类型的私有成员，以及外层类所能访问的东西</li>
+<li>可以使用所有的访问修饰符来声明</li>
+<li>从外层累以外访问嵌套类型需要使用外层类名称进行限定（就像访问静态成员那样）</li>
+</ul>
 </div></div></article><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/06/29/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%EF%BC%88%E6%9C%AA%E5%AE%8C%EF%BC%89/">设计模式（未完）</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-06-29</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2020-06-29</span></span></div></header><div class="post-body"><div class="post-excerpt">
         <h1 id="设计模式"   >
           <a href="#设计模式" class="heading-link"><i class="fas fa-link"></i></a>设计模式</h1>
