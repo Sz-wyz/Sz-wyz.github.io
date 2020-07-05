@@ -27,10 +27,8 @@ var CONFIG = {
   sourcePath: {"js":"js","css":"css","images":"images"},
 };
 
-window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">Categories</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Szwyz's Blog</div><div class="header-banner-info__subtitle">蚍蜉撼树</div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/07/01/C#%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%88%E6%9C%AA%E5%AE%8C%EF%BC%89/">C#学习笔记（未完）</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-07-01</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2020-07-04</span></span></div></header><div class="post-body"><div class="post-excerpt">
-        <h1 id="C"   >
-          <a href="#C" class="heading-link"><i class="fas fa-link"></i></a>C#</h1>
-      
+window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">Categories</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Szwyz's Blog</div><div class="header-banner-info__subtitle">蚍蜉撼树</div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content content-home" id="content"><section class="postlist"><article class="postlist-item post"><header class="post-header"><h1 class="post-title"><a class="post-title__link" href="/2020/07/05/C#%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">C#学习笔记</a></h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-07-05</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2020-07-05</span></span></div></header><div class="post-body"><div class="post-excerpt"><p>[TOC]</p>
+
         <h2 id="编译"   >
           <a href="#编译" class="heading-link"><i class="fas fa-link"></i></a>编译</h2>
       <ul>
@@ -43,6 +41,57 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 </li>
 </ul>
 
+        <h2 id="C-基础"   >
+          <a href="#C-基础" class="heading-link"><i class="fas fa-link"></i></a>C#基础</h2>
+      
+        <h3 id="转换"   >
+          <a href="#转换" class="heading-link"><i class="fas fa-link"></i></a>转换</h3>
+      <p>转换始终会根据一个已经存在的值创建一个新的值。转换可以是显式的或隐式的：隐式转换自动发生而显示转换需要强制转换。</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int x &#x3D; 12345;</span><br><span class="line">long y &#x3D;  x; &#x2F;&#x2F; 隐式转换</span><br><span class="line">short z &#x3D; (short)x; &#x2F;&#x2F; 显式转换</span><br></pre></td></tr></table></div></figure>
+<p>隐式转换只有在以下条件都满足时才会进行：</p>
+<ul>
+<li>编译器能确保转换总能成功</li>
+<li>没有信息在转换过程中丢失<br>显示转换只有在以下条件都满足时才会进行：</li>
+<li>编译器不能保证转换总是成功</li>
+<li>信息在转换过程中可能有丢失</li>
+</ul>
+
+        <h3 id="位运算符"   >
+          <a href="#位运算符" class="heading-link"><i class="fas fa-link"></i></a>位运算符</h3>
+      <p>C#支持的位运算符有：</p>
+<ul>
+<li>~ 按位取反</li>
+<li>&amp; 按位与</li>
+<li>| 按位或</li>
+<li>^ 按位异或</li>
+<li>&lt;&lt; 按位左移</li>
+<li>&gt;&gt; 按位右移</li>
+</ul>
+
+        <h3 id="ref修饰符"   >
+          <a href="#ref修饰符" class="heading-link"><i class="fas fa-link"></i></a>ref修饰符</h3>
+      <p>在C#中，若按引用传递参数则应使用ref参数修饰符。下面的例子中p和x指向同一块内存位置</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Test</span><br><span class="line">&#123;</span><br><span class="line">    static void Foo(ref int p)</span><br><span class="line">    &#123;</span><br><span class="line">        p &#x3D; p + 1;</span><br><span class="line">        Console.WriteLine(p);  &#x2F;&#x2F; 9</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    static void Main()</span><br><span class="line">    &#123;</span><br><span class="line">        int x &#x3D; 8;</span><br><span class="line">        Foo(ref x);</span><br><span class="line">        Console.WriteLine(x); &#x2F;&#x2F; 9</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="out修饰符"   >
+          <a href="#out修饰符" class="heading-link"><i class="fas fa-link"></i></a>out修饰符</h3>
+      <p>out参数不需要再传入函数之前进行赋值，必须在函数结束之前赋值。</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">class Test</span><br><span class="line">&#123;</span><br><span class="line">    static void Split(string name, out string firstNames, out string lastName)</span><br><span class="line">    &#123;</span><br><span class="line">        int i &#x3D; name.LastIndexOf(&#39; &#39;);</span><br><span class="line">        firstNames &#x3D; name.Substring(0, i);</span><br><span class="line">        lastName &#x3D; name.Substring(i + 1);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    static void Main()</span><br><span class="line">    &#123;</span><br><span class="line">        string a, b;</span><br><span class="line">        Split(&quot;Stevie Ray Vaughan&quot;, out a, out b);</span><br><span class="line">        Console.WriteLine(a);</span><br><span class="line">        Console.WriteLine(b);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="params修饰符"   >
+          <a href="#params修饰符" class="heading-link"><i class="fas fa-link"></i></a>params修饰符</h3>
+      <p>params参数修饰符只能修饰方法中的最后一个参数，它能够使方法接受任意数量的指定参数类型。参数类型必须声明为数组。</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">class Test</span><br><span class="line">&#123;</span><br><span class="line">    static int Sum(params int[] ints)</span><br><span class="line">    &#123;</span><br><span class="line">        int sum &#x3D; 0;</span><br><span class="line">        for (int i &#x3D; 0; i &lt; ints.Length; i++)</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">            sum +&#x3D; ints[i];</span><br><span class="line">        &#125;</span><br><span class="line">        return sum;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    static void Main()</span><br><span class="line">    &#123;</span><br><span class="line">        int total &#x3D; Sum(1, 2, 3, 4);</span><br><span class="line">        Console.WriteLine(total);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
+
+
+        <h3 id="null运算符"   >
+          <a href="#null运算符" class="heading-link"><i class="fas fa-link"></i></a>null运算符</h3>
+      <p><strong>nullh合并运算符</strong>意思是如果操作数不是null则结果为操作数，否则结果为一个默认的值</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string s1 &#x3D; null;</span><br><span class="line">string s2 &#x3D; s1 ?? &quot;nothing&quot;; &#x2F;&#x2F;如果左侧的表达式不是null则右侧的表达式将不会进行计算</span><br></pre></td></tr></table></div></figure>
+<p><strong>null条件运算符</strong>该运算符可以像标准的“.”运算符那样访问成员以及调用方法。当运算符的左侧为null时，该表达式的运算结果也是null而不会抛出NullReferenceException异常<br>string s = sb?.ToString();</p>
+
         <h3 id="Null附加课程"   >
           <a href="#Null附加课程" class="heading-link"><i class="fas fa-link"></i></a>Null附加课程</h3>
       
@@ -54,8 +103,6 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 </ul>
 <p>例如 bool类型有True和False 而 Nullable&lt;bool&gt;有True、False和null</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">static void Main(string[] args)</span><br><span class="line">	&#123;</span><br><span class="line">    	string str &#x3D; &quot;dsafdsafdsfsd&quot;;</span><br><span class="line">        int? indexOfM &#x3D; null; &#x2F;&#x2F; 可空类型</span><br><span class="line">        Nullable&lt;int&gt; indexOFM &#x3D; null; &#x2F;&#x2F; 相当于这个</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></div></figure>
-
-
 
 
         <h4 id="Null和空，空白string"   >
@@ -87,7 +134,10 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">static void Main(string[] args)</span><br><span class="line">    &#123;</span><br><span class="line">        &#123;</span><br><span class="line">            int i &#x3D; 3;</span><br><span class="line">            int? j &#x3D; i; &#x2F;&#x2F; 隐式转换</span><br><span class="line">            Console.WriteLine(j);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &#123;</span><br><span class="line">            int? i &#x3D; 3;</span><br><span class="line">            int j &#x3D; (int)i; &#x2F;&#x2F; 显式转换</span><br><span class="line">            Console.WriteLine(j);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></div></figure>
 
 
-
+        <h3 id="foreach循环"   >
+          <a href="#foreach循环" class="heading-link"><i class="fas fa-link"></i></a>foreach循环</h3>
+      <p>foreach语句遍历可枚举对象的每一个元素。</p>
+<figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">foreach (char c in &quot;beer&quot;)</span><br><span class="line">	Console.WriteLine(c);</span><br></pre></td></tr></table></div></figure>
 
 
 
