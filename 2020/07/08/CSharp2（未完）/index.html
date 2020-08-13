@@ -33,7 +33,7 @@ var CONFIG = {
 
 window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">Categories</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Szwyz's Blog</div><div class="header-banner-info__subtitle">蚍蜉撼树</div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">C#进阶（未完）</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-07-08</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2020-07-08</span></span></div></header><div class="post-body"><p>[TOC]</p>
 
-        <h2 id="泛型"   >
+        <h2 id="泛型">
           <a href="#泛型" class="heading-link"><i class="fas fa-link"></i></a>泛型</h2>
       <p>C#中在不同的类型复用代码有两种方法：继承和泛型。泛型：使用了带有（类型）占位符的模板</p>
 <p>泛型会声明类型参数-泛型的消费者需要提供类型参数（argument）来把占位符类型填充上</p>
@@ -44,13 +44,13 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <li>Stack&lt;int&gt; Closed Type（封闭类型）// 在运行时，所有的泛型类型实例都是封闭的</li>
 </ul>
 
-        <h3 id="泛型方法"   >
+        <h3 id="泛型方法">
           <a href="#泛型方法" class="heading-link"><i class="fas fa-link"></i></a>泛型方法</h3>
       <p>泛型方法在方法的签名内也可以声明类型参数</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">static void Swap&lt;T&gt;(ref T a,ref T b)</span><br><span class="line">&#123;</span><br><span class="line">	T temp &#x3D; a;</span><br><span class="line">	a &#x3D; b;</span><br><span class="line">	b &#x3D; temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int x &#x3D; 5;</span><br><span class="line">int y &#x3D; 10;</span><br><span class="line">Swap(ref x,ref y);</span><br></pre></td></tr></table></div></figure>
 
 
-        <h3 id="声明类型参数"   >
+        <h3 id="声明类型参数">
           <a href="#声明类型参数" class="heading-link"><i class="fas fa-link"></i></a>声明类型参数</h3>
       <ul>
 <li>在声明class、struct、interface、delegate的时候可以引入类型参数</li>
@@ -65,7 +65,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">class A &#123;&#125;</span><br><span class="line">class A&lt;T&gt; &#123;&#125;</span><br><span class="line">class A&lt;T1,T2&gt; &#123;&#125;</span><br></pre></td></tr></table></div></figure>
 
 
-        <h3 id="typeof和未绑定泛型类型"   >
+        <h3 id="typeof和未绑定泛型类型">
           <a href="#typeof和未绑定泛型类型" class="heading-link"><i class="fas fa-link"></i></a>typeof和未绑定泛型类型</h3>
       <ul>
 <li>开放的泛型类型在编译后就变成了封闭的泛型类型</li>
@@ -75,7 +75,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 
 <p><strong>泛型的默认值：</strong>default关键字可以用于获取泛型类型参数的默认值。 array[i] = default(T)</p>
 
-        <h3 id="泛型约束"   >
+        <h3 id="泛型约束">
           <a href="#泛型约束" class="heading-link"><i class="fas fa-link"></i></a>泛型约束</h3>
       <ul>
 <li>默认情况下，泛型的类型参数可以是任何类型的。</li>
@@ -85,7 +85,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">class Stack&lt;T&gt;</span><br><span class="line">&#123;</span><br><span class="line">	Stack&lt;U&gt; FilteredStack&lt;U&gt;() where U : T&#123;...&#125;</span><br><span class="line">	&#x2F;&#x2F; 泛型方法FilteredStack有一个泛型参数U，要求U必须继承自T</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
 
 
-        <h3 id="泛型类型的子类"   >
+        <h3 id="泛型类型的子类">
           <a href="#泛型类型的子类" class="heading-link"><i class="fas fa-link"></i></a>泛型类型的子类</h3>
       <ul>
 <li>泛型class可以有子类，在子类里，可以继续让父类的类型参数保持开放</li>
@@ -101,7 +101,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <li>子类型也可以引入新的类型参数                                                                                                                                                                          </li>
 </ul>
 
-        <h3 id="自引用的泛型声明"   >
+        <h3 id="自引用的泛型声明">
           <a href="#自引用的泛型声明" class="heading-link"><i class="fas fa-link"></i></a>自引用的泛型声明</h3>
       <ul>
 <li>在封闭类型参数的时候，该类型可以把它自己作为具体的类型</li>
@@ -112,7 +112,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class Bob&lt;T&gt; &#123; public static int Count;&#125;</span><br><span class="line"></span><br><span class="line">class Test</span><br><span class="line">&#123;</span><br><span class="line">    static void Main()</span><br><span class="line">    &#123;</span><br><span class="line">        Console.WriteLine(++Bob&lt;int&gt;.Count); &#x2F;&#x2F; 1</span><br><span class="line">        Console.WriteLine(++Bob&lt;int&gt;.Count); &#x2F;&#x2F; 2</span><br><span class="line">        Console.WriteLine(++Bob&lt;string&gt;.Count); &#x2F;&#x2F; 1</span><br><span class="line">        Console.WriteLine(++Bob&lt;object&gt;.Count); &#x2F;&#x2F; 1</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
 
 
-        <h3 id="类型参数和转换"   >
+        <h3 id="类型参数和转换">
           <a href="#类型参数和转换" class="heading-link"><i class="fas fa-link"></i></a>类型参数和转换</h3>
       <ul>
 <li>C#转换操作符支持下列转换：<ul>
@@ -130,16 +130,16 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int Foo&lt;T&gt; (T x) &#x3D;&gt; (int)x; &#x2F;&#x2F; Compile-time error</span><br><span class="line"></span><br><span class="line">int Foo&lt;T&gt; (T x) &#x3D;&gt; (int)(object)x; &#x2F;&#x2F; 解决办法</span><br></pre></td></tr></table></div></figure>
 
 
-        <h3 id="协变（未完）"   >
+        <h3 id="协变（未完）">
           <a href="#协变（未完）" class="heading-link"><i class="fas fa-link"></i></a>协变（未完）</h3>
       
-        <h3 id="逆变（未完）"   >
+        <h3 id="逆变（未完）">
           <a href="#逆变（未完）" class="heading-link"><i class="fas fa-link"></i></a>逆变（未完）</h3>
       
-        <h3 id="不变（未完）"   >
+        <h3 id="不变（未完）">
           <a href="#不变（未完）" class="heading-link"><i class="fas fa-link"></i></a>不变（未完）</h3>
       
-        <h3 id="C-泛型和C-模板对比"   >
+        <h3 id="C-泛型和C-模板对比">
           <a href="#C-泛型和C-模板对比" class="heading-link"><i class="fas fa-link"></i></a>C#泛型和C++模板对比</h3>
       <p>C#的泛型和C++的模板在应用上很相似，但是它们的工作原理却大不相同。两者都发生了生产者和消费者的关联，且生产者的占位符将被消费者填充。但是在C#泛型中，生产者的类型(开放类型如List&lt;T&gt;)可以编译到程序库中(如mscorlib.dII) 。这是因为生产者和消费者进行关联生成封闭类型是在运行时发生的。而C++模板中，这一关联是在编译时进行的。这意味着C++不能将模板库部署为. dll,它们只存在于源代码中。这令动态语法检查难以实现，更不用说即时创建或参数化类型了。</p>
 <p>为了深究这一情形形成的原因，我们重新观察C#的Max方法：</p>
@@ -153,17 +153,17 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 
 
 
-        <h2 id="C-的高级特性"   >
+        <h2 id="C-的高级特性">
           <a href="#C-的高级特性" class="heading-link"><i class="fas fa-link"></i></a>C#的高级特性</h2>
       
-        <h3 id="委托"   >
+        <h3 id="委托">
           <a href="#委托" class="heading-link"><i class="fas fa-link"></i></a>委托</h3>
       <p>委托是一个对象，它知道如何调用一个方法。</p>
 <p>委托类型定义了委托实例可以调用的那类方法，具体来说，委托类型定义了方法的返回类型和参数。</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">delegate int Transformer(int x);</span><br><span class="line">&#x2F;&#x2F; Transformer兼容任何返回类型为int并有一个int类型的参数的方法,比如如下方法</span><br><span class="line">static int Square(int x) &#x3D;&gt; x*x;</span><br></pre></td></tr></table></div></figure>
 
 
-        <h4 id="委托实例"   >
+        <h4 id="委托实例">
           <a href="#委托实例" class="heading-link"><i class="fas fa-link"></i></a>委托实例</h4>
       <p>把方法赋值给委托变量的时候就创建了委托实例</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Transformer t &#x3D; Square;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;调用</span><br><span class="line">int answer &#x3D; t(3); &#x2F;&#x2F; 9</span><br></pre></td></tr></table></div></figure>
@@ -173,7 +173,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Transformer t &#x3D; Square; &#x2F;&#x2F; 简写</span><br><span class="line">Transformer t &#x3D; new Transformer(Square);</span><br><span class="line"></span><br><span class="line">t(3); &#x2F;&#x2F; 简写</span><br><span class="line">t.Invoke(3);</span><br></pre></td></tr></table></div></figure>
 
 
-        <h4 id="编写插件式的方法"   >
+        <h4 id="编写插件式的方法">
           <a href="#编写插件式的方法" class="heading-link"><i class="fas fa-link"></i></a>编写插件式的方法</h4>
       <ul>
 <li>方法是运行时才赋值给委托变量的</li>
@@ -181,7 +181,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">public delegate int Transformer(int x);</span><br><span class="line"></span><br><span class="line">class Util</span><br><span class="line">&#123;</span><br><span class="line">    public static void Transform(int[] values, Transformer t)</span><br><span class="line">    &#123;</span><br><span class="line">        for (int i &#x3D; 0; i &lt; values.Length; i++)</span><br><span class="line">            values[i] &#x3D; t(values[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Test</span><br><span class="line">&#123;</span><br><span class="line">    static void Main()</span><br><span class="line">    &#123;</span><br><span class="line">        int[] values &#x3D; &#123; 1, 2, 3 &#125;;</span><br><span class="line">        Util.Transform(values, Square);</span><br><span class="line"></span><br><span class="line">        foreach (int i in values)</span><br><span class="line">            Console.WriteLine(i + &quot; &quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    static int Square(int x) &#x3D;&gt; x * x;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
 
 
-        <h4 id="多播委托"   >
+        <h4 id="多播委托">
           <a href="#多播委托" class="heading-link"><i class="fas fa-link"></i></a>多播委托</h4>
       <p>所有委托实例都具有多播的能力。一个委托实例可以引用一组目标方法。</p>
 <p>使用+=操作符可以合并委托实例：</p>
@@ -196,7 +196,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 </ul>
 <p>如果一个多播委托拥有非void的返回类型，则调用者将从最后一个触发的方法接收返回值。前面的方法仍然调用，但是返回值都会被丢弃。大部分调用多播委托的情况都会返回void类型，因此这个细小的差异就没有了。</p>
 
-        <h4 id="实例方法目标和静态方法目标"   >
+        <h4 id="实例方法目标和静态方法目标">
           <a href="#实例方法目标和静态方法目标" class="heading-link"><i class="fas fa-link"></i></a>实例方法目标和静态方法目标</h4>
       <ul>
 <li>当一个实例方法被赋值给委托对象的时候，这个委托对象不仅要保留对方法的引用，还要保留着方法所属实例的引用</li>
@@ -206,17 +206,17 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">namespace Demo</span><br><span class="line">&#123;</span><br><span class="line">    public delegate void ProgressReporter(int percentComplete);</span><br><span class="line"></span><br><span class="line">    class X</span><br><span class="line">    &#123;</span><br><span class="line">        public void InstanceProgress(int percentComplete)</span><br><span class="line">        &#x3D;&gt; Console.WriteLine(percentComplete);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public class Program</span><br><span class="line">    &#123;</span><br><span class="line">        static void Main()</span><br><span class="line">        &#123;</span><br><span class="line">            X x &#x3D; new X();</span><br><span class="line">            ProgressReporter p &#x3D; x.InstanceProgress;</span><br><span class="line">            p(99);</span><br><span class="line">            Console.WriteLine(p.Target &#x3D;&#x3D; x); &#x2F;&#x2F; True</span><br><span class="line">            Console.WriteLine(p.Method); &#x2F;&#x2F; Void InstanceProgress(Int32) 表示这个方法</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
 
 
-        <h4 id="泛型委托类型"   >
+        <h4 id="泛型委托类型">
           <a href="#泛型委托类型" class="heading-link"><i class="fas fa-link"></i></a>泛型委托类型</h4>
       <p>委托类型可以包含泛型类型参数</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">namespace Demo</span><br><span class="line">&#123;</span><br><span class="line">    public delegate T Transformer&lt;T&gt;(T arg); &#x2F;&#x2F; 返回类型T</span><br><span class="line"></span><br><span class="line">    public class Util</span><br><span class="line">    &#123;</span><br><span class="line">        public static void Transform&lt;T&gt;(T[] values, Transformer&lt;T&gt; t) &#x2F;&#x2F; 泛型方法</span><br><span class="line">        &#123;</span><br><span class="line">            for (int i &#x3D; 0; i &lt; values.Length; i++)</span><br><span class="line">            &#123;</span><br><span class="line">                values[i] &#x3D; t(values[i]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        class Test</span><br><span class="line">        &#123;</span><br><span class="line">            static void Main()</span><br><span class="line">            &#123;</span><br><span class="line">                int[] values &#x3D; &#123; 1, 2, 3 &#125;;</span><br><span class="line">                Util.Transform(values, Square);</span><br><span class="line">                foreach (int i in values)</span><br><span class="line">                    Console.Write(i + &quot; &quot;);</span><br><span class="line">            &#125;</span><br><span class="line">            static int Square(int x) &#x3D;&gt; x * x;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
 
 
-        <h4 id="Func和Action委托（未完）"   >
+        <h4 id="Func和Action委托（未完）">
           <a href="#Func和Action委托（未完）" class="heading-link"><i class="fas fa-link"></i></a>Func和Action委托（未完）</h4>
       <p>使用泛型委托，就可以写出这样一组委托类型，它们可调用的方法可以拥有任意的返回类型和任意（合理）数量的参数。</p>
 
-        <h4 id="委托vs接口"   >
+        <h4 id="委托vs接口">
           <a href="#委托vs接口" class="heading-link"><i class="fas fa-link"></i></a>委托vs接口</h4>
       <ul>
 <li>委托可以解决的问题，接口都可以解决</li>
@@ -228,7 +228,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 </li>
 </ul>
 
-        <h4 id="委托类型的兼容性"   >
+        <h4 id="委托类型的兼容性">
           <a href="#委托类型的兼容性" class="heading-link"><i class="fas fa-link"></i></a>委托类型的兼容性</h4>
       <p>委托类型之间互不相容，即使方法签名一样</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">delegate void D1();</span><br><span class="line">delegate void D2();</span><br><span class="line"></span><br><span class="line">D1 d1 &#x3D; Method1;</span><br><span class="line">D2 d2 &#x3D; d1; &#x2F;&#x2F; Compile-time error</span><br></pre></td></tr></table></div></figure>
@@ -242,7 +242,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 
 
 
-        <h3 id="事件"   >
+        <h3 id="事件">
           <a href="#事件" class="heading-link"><i class="fas fa-link"></i></a>事件</h3>
       <p>使用委托的时候，通常会出现两个角色：广播者和订阅者</p>
 <p>广播者包含一个委托字段，广播者通过调用委托爱决定什么时候进行广播</p>
@@ -252,7 +252,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 
 <p><strong>注意：</strong>在类的内外是区别对待的。Broadercaster类型里面的代码拥有对PriceChanged的完全访问权，在这里就把它当做委托。而Broadercaster类型以外的代码只能对PriceChanged这个事件执行 +=和-=操作。</p>
 
-        <h4 id="标准的事件模式（未完）"   >
+        <h4 id="标准的事件模式（未完）">
           <a href="#标准的事件模式（未完）" class="heading-link"><i class="fas fa-link"></i></a>标准的事件模式（未完）</h4>
       <ul>
 <li>为编写事件，.NET定义了一个标准的模式</li>
@@ -274,7 +274,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class Stock</span><br><span class="line">&#123;</span><br><span class="line">    ...</span><br><span class="line">    public event EventHandler&lt;PriceChangedEventArgs&gt; PriceChanged;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
 
 
-        <h3 id="Lambda表达式"   >
+        <h3 id="Lambda表达式">
           <a href="#Lambda表达式" class="heading-link"><i class="fas fa-link"></i></a>Lambda表达式</h3>
       <p>Lambda表达式是一种可以替代委托实例的匿名方法。编译器会立即将Lambda表达式转换为以下两种形式之- :</p>
 <ul>
@@ -293,13 +293,13 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Func&lt;string,string,int&gt; totalLength &#x3D; (s1,s2) &#x3D;&gt; s1.Length + s2.Length;</span><br><span class="line">int total &#x3D; totalLength(&quot;hello&quot;,&quot;world&quot;); &#x2F;&#x2F; 10</span><br></pre></td></tr></table></div></figure>
 
 
-        <h4 id="显式指定Lambda表达式的参数类型"   >
+        <h4 id="显式指定Lambda表达式的参数类型">
           <a href="#显式指定Lambda表达式的参数类型" class="heading-link"><i class="fas fa-link"></i></a>显式指定Lambda表达式的参数类型</h4>
       <p>当编译器无法推断Lambda表达式的参数类型时，就需要显式的指定Lambda表达式的参数类型</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">void Foo&lt;T&gt; (T x) &#123;&#125;</span><br><span class="line">void Bar&lt;T&gt; (Action&lt;T&gt; a) &#123;&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 以下代码无法通过编译，因为编译器无法推断x的类型</span><br><span class="line">Bar(x &#x3D;&gt; Foo(X));</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 可以通过显式指定x的类型来修正这个问题</span><br><span class="line">Bar((int x) &#x3D;&gt; Foo(x));</span><br><span class="line">&#x2F;&#x2F; 也可以指定泛型类型参数的类型</span><br><span class="line">Bar&lt;int&gt; (x&#x3D;&gt; Foo(x));</span><br></pre></td></tr></table></div></figure>
 
 
-        <h4 id="捕获外部变量"   >
+        <h4 id="捕获外部变量">
           <a href="#捕获外部变量" class="heading-link"><i class="fas fa-link"></i></a>捕获外部变量</h4>
       <p>lambda表达式可以引用本地的变量和所在方法的参数</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">static void Main()</span><br><span class="line">&#123;</span><br><span class="line">    int factor &#x3D; 2;</span><br><span class="line">    Func&lt;int,int&gt; multiplier &#x3D; n&#x3D;&gt; n * factor;</span><br><span class="line">    Console.WriteLine(multiplier(3)); &#x2F;&#x2F; 6</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
@@ -317,13 +317,13 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 
 <p>被捕获的变量的声明周期会被延长到和委托一样</p>
 
-        <h4 id="Lambda表达式内的本地变量"   >
+        <h4 id="Lambda表达式内的本地变量">
           <a href="#Lambda表达式内的本地变量" class="heading-link"><i class="fas fa-link"></i></a>Lambda表达式内的本地变量</h4>
       <p>在Lambda表达式内实例化的本地变量对于委托实例的每次调用来说都是唯一的。</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">static Func&lt;int&gt; Natural()</span><br><span class="line">&#123;</span><br><span class="line">    return() &#x3D;&gt; &#123;int seed &#x3D; 0; return seed++; &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">static void Main()</span><br><span class="line">&#123;</span><br><span class="line">    Func&lt;int&gt; natural &#x3D; Natural();</span><br><span class="line">    Console.WriteLine(natural()); &#x2F;&#x2F; 0</span><br><span class="line">    Console.WriteLine(natural()); &#x2F;&#x2F; 0</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
 
 
-        <h4 id="捕获迭代变量"   >
+        <h4 id="捕获迭代变量">
           <a href="#捕获迭代变量" class="heading-link"><i class="fas fa-link"></i></a>捕获迭代变量</h4>
       <p>当捕获for循环的迭代变量时，C#会把这个变量当做是在循环外部定义的变量，这就意味着每次迭代捕获的都是同一个变量</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Action[] actions &#x3D; new Action[3]; &#x2F;&#x2F; Action数组 可以容纳三个委托</span><br><span class="line"></span><br><span class="line">for (int i &#x3D;0; i &lt; 3; i++)</span><br><span class="line">    actions[i] &#x3D; () &#x3D;&gt; Console.Write(i); &#x2F;&#x2F; 把输出这个Lambda表达式赋值给action委托</span><br><span class="line"></span><br><span class="line">foreach(Action a in actions) a(); &#x2F;&#x2F; 333 循环委托数组</span><br></pre></td></tr></table></div></figure>
@@ -332,7 +332,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Action[] actions &#x3D; new Action[3]; &#x2F;&#x2F; Action数组 可以容纳三个委托</span><br><span class="line">for (int i &#x3D;0; i &lt; 3; i++)</span><br><span class="line">&#123;</span><br><span class="line">	int loopScopedi &#x3D; i; </span><br><span class="line">    actions[i] &#x3D; () &#x3D;&gt; Console.Write(loopScopedi); </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">foreach(Action a in actions) a(); &#x2F;&#x2F; 012</span><br></pre></td></tr></table></div></figure>
 
 
-        <h4 id="Lambda表达式和本地方法"   >
+        <h4 id="Lambda表达式和本地方法">
           <a href="#Lambda表达式和本地方法" class="heading-link"><i class="fas fa-link"></i></a>Lambda表达式和本地方法</h4>
       <p>本地方法是C#7的一个新特性。它和L ambda表达式在功能上有很多重复之处，但它有三个优点:</p>
 <ul>
@@ -342,10 +342,10 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 </ul>
 <p>本地方法效率更高是因为它避兔了委托的间接调用(需要CPU周期,内存分配)。本地方法也可以访问所在方法的本地变量，而且无需编译器把被捕获的变量hoist到隐藏的类。</p>
 
-        <h3 id="Try语句和异常"   >
+        <h3 id="Try语句和异常">
           <a href="#Try语句和异常" class="heading-link"><i class="fas fa-link"></i></a>Try语句和异常</h3>
       
-        <h4 id="catch"   >
+        <h4 id="catch">
           <a href="#catch" class="heading-link"><i class="fas fa-link"></i></a>catch</h4>
       <ul>
 <li>catch块可以访问一个Exception对象，这个Exception对象里含有关于错误的信息</li>
@@ -354,19 +354,19 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <p>可以把异常类型和变量都拿掉，这就代表着会捕获所有的异常</p>
 <p>catch {…..}</p>
 
-        <h4 id="finally"   >
+        <h4 id="finally">
           <a href="#finally" class="heading-link"><i class="fas fa-link"></i></a>finally</h4>
       <p>finall块为程序增加了确定性:：CLR总是尽力去执行它。它通常用来做一些清理任务。</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">try</span><br><span class="line">&#123;</span><br><span class="line">	... &#x2F;&#x2F; 可能发生异常错误的代码</span><br><span class="line">&#125;</span><br><span class="line">catch (ExceptionA ex) &#x2F;&#x2F; 每个catch捕获一个特定异常</span><br><span class="line">&#123;</span><br><span class="line">	... &#x2F;&#x2F; handle exception of type ExceptionA</span><br><span class="line">&#125;</span><br><span class="line">catch (ExceptionB ex)</span><br><span class="line">&#123;</span><br><span class="line">		... &#x2F;&#x2F; handle exception of type ExceptionB</span><br><span class="line">&#125;</span><br><span class="line">finally</span><br><span class="line">&#123;</span><br><span class="line">... &#x2F;&#x2F; cleanup code</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
 
 
-        <h4 id="异常的过滤"   >
+        <h4 id="异常的过滤">
           <a href="#异常的过滤" class="heading-link"><i class="fas fa-link"></i></a>异常的过滤</h4>
       <p>从C#6开始，可以在catch子句中添加一个when子句来指定一个异常过滤器</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">catch (WebException ex) when (ex.Status &#x3D;&#x3D; WebExceptionStatus.Timeout)</span><br><span class="line">&#123;</span><br><span class="line">    ... &#x2F;&#x2F;当when后面的布尔表达式true时才会执行</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
 
 
-        <h4 id="抛出异常"   >
+        <h4 id="抛出异常">
           <a href="#抛出异常" class="heading-link"><i class="fas fa-link"></i></a>抛出异常</h4>
       <p>异常可以被运行时或者用户抛出</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">class Test</span><br><span class="line">&#123;</span><br><span class="line">	static void Display (string name )</span><br><span class="line">	&#123;</span><br><span class="line">		if (nane &#x3D;&#x3D; null)</span><br><span class="line">			throw new ArgunentNullException (naneof (nane)) ;&#x2F;&#x2F;用户抛出的异常</span><br><span class="line">		Console .WriteLine (name );</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">	static void Main()</span><br><span class="line">	&#123;</span><br><span class="line">		try &#123; Display (null); &#125;</span><br><span class="line">		catch (ArgumentNullException ex)</span><br><span class="line">    	&#123;</span><br><span class="line">        	Console .WriteLine (&quot;Caught the exception&quot;);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
@@ -377,7 +377,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 
 <p>如果使用throw ex代替throw的话，程序仍可运行，但是新传递的异常的Stacktrace属性就不会反应原始错误了。</p>
 
-        <h4 id="System-Exception的关键属性"   >
+        <h4 id="System-Exception的关键属性">
           <a href="#System-Exception的关键属性" class="heading-link"><i class="fas fa-link"></i></a>System.Exception的关键属性</h4>
       <ul>
 <li>StackTrace 它是一个字符串，展现了从异常发生地到catch块所有被调用的方法</li>
@@ -385,10 +385,10 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <li>InnerException 引起外层异常的内层异常(如果存在的话)。而且InnerException本身还有可能含有InnerException</li>
 </ul>
 
-        <h3 id="枚举和迭代器"   >
+        <h3 id="枚举和迭代器">
           <a href="#枚举和迭代器" class="heading-link"><i class="fas fa-link"></i></a>枚举和迭代器</h3>
       
-        <h4 id="枚举"   >
+        <h4 id="枚举">
           <a href="#枚举" class="heading-link"><i class="fas fa-link"></i></a>枚举</h4>
       <ul>
 <li>枚举器是一个只读的，作用于一序列值的、只能向前的游标。</li>
@@ -401,7 +401,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <li>foreach语句会迭代可枚举的对象(enumerable object)。可枚举的对象是一序列值的逻辑表示。它本身不是游标，它是一个可以基于本身产生游标的对象。</li>
 </ul>
 
-        <h5 id="可枚举对象"   >
+        <h5 id="可枚举对象">
           <a href="#可枚举对象" class="heading-link"><i class="fas fa-link"></i></a>可枚举对象</h5>
       <ul>
 <li>一个可枚举对象可以是(下列任意一个)：<ul>
@@ -413,7 +413,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <li>lEnumerator&lt;T&gt;和lEnumerable&lt;T&gt;是定义在System.Collections.Generic命名空间下的。</li>
 </ul>
 
-        <h5 id="枚举模式"   >
+        <h5 id="枚举模式">
           <a href="#枚举模式" class="heading-link"><i class="fas fa-link"></i></a>枚举模式</h5>
       <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class Enumerator &#x2F;&#x2F; 枚举器 通常实现了IEnumerator或者Inumerator&lt;T&gt;</span><br><span class="line">&#123;</span><br><span class="line">    public IteratorVariableType Current&#123; get&#123;...&#125;&#125;</span><br><span class="line">    public bool MoveNext() &#123;...&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Enumerable &#x2F;&#x2F; 可枚举的对象 通常实现了IEnumerable或者Inumerable&lt;T&gt;</span><br><span class="line">&#123;</span><br><span class="line">    public Enumerator GetEnumerator() &#123;...&#125; &#x2F;&#x2F; 返回一个Enumerator</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
 
@@ -421,17 +421,17 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">foreach (char C in &quot;beer&quot;)</span><br><span class="line">	Console.WriteLine (C);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">using (var enumerator &#x3D; &quot;beer&quot;.GetEnumerator())</span><br><span class="line">	while ( enumerator.MoveNext())</span><br><span class="line">    &#123;</span><br><span class="line">	var element &#x3D; enumerator.Current;</span><br><span class="line">	Console .WriteLine (element);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></div></figure>
 
 
-        <h5 id="集合初始化器"   >
+        <h5 id="集合初始化器">
           <a href="#集合初始化器" class="heading-link"><i class="fas fa-link"></i></a>集合初始化器</h5>
       <p>只需一步就可以把可枚举对象进行实例化并且填充里面的元素：</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">using System.Collections.Generic;</span><br><span class="line">List&lt;int&gt; list &#x3D; new List&lt;int&gt;&#123;1,2,3&#125;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 但是编译器会把它翻译成</span><br><span class="line">using System.Collections.Generic;</span><br><span class="line">List&lt;int&gt; list &#x3D; new List&lt;int&gt;();</span><br><span class="line">list.Add(1);</span><br><span class="line">list.Add(2);</span><br><span class="line">list.Add(3);</span><br></pre></td></tr></table></div></figure>
 
 
-        <h4 id="迭代器Iterators（未完）"   >
+        <h4 id="迭代器Iterators（未完）">
           <a href="#迭代器Iterators（未完）" class="heading-link"><i class="fas fa-link"></i></a>迭代器Iterators（未完）</h4>
       <p>foreach语句是枚举器(enumerator) 的消费者，而迭代器(iterator) 是枚举器的生产者。</p>
 
-        <h3 id="拓展方法"   >
+        <h3 id="拓展方法">
           <a href="#拓展方法" class="heading-link"><i class="fas fa-link"></i></a>拓展方法</h3>
       <ul>
 <li>扩展方法允许我们使用新的方法来扩展现有的类型,而且无需修改原有类型的定义.</li>
@@ -444,24 +444,24 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">arg0.Method (arg1, arg2,…); &#x2F;&#x2F; Extension method call</span><br><span class="line">StaticClass.Method (arg0， arg1， arg2， ...); &#x2F;&#x2F; Static nethod call</span><br></pre></td></tr></table></div></figure>
 
 
-        <h4 id="歧义和解析命名空间"   >
+        <h4 id="歧义和解析命名空间">
           <a href="#歧义和解析命名空间" class="heading-link"><i class="fas fa-link"></i></a>歧义和解析命名空间</h4>
       <p>只有所在类处于在作用范围内的拓展方法才可以被访问，典型的做法是引入命名空间</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">namespace MyApp</span><br><span class="line">&#123;</span><br><span class="line">    using Utils;</span><br><span class="line">    class Test</span><br><span class="line">    &#123;</span><br><span class="line">        static void Main() &#x3D;&gt; Console.WriteLine(&quot;Perth&quot;.IsCapitalized());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
 
 
-        <h4 id="拓展方法和实例方法"   >
+        <h4 id="拓展方法和实例方法">
           <a href="#拓展方法和实例方法" class="heading-link"><i class="fas fa-link"></i></a>拓展方法和实例方法</h4>
       <p>任何兼容的实例方法的优先级总是高于扩展方法。在下面的例子中，即使参数x类型为int也会优先调用Test的Fo方法：</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">class Test</span><br><span class="line">&#123;</span><br><span class="line">    public void Foo(objectx) &#123; &#125; &#x2F;&#x2F; This method always wins</span><br><span class="line">&#125;</span><br><span class="line">static class Extensions</span><br><span class="line">&#123;</span><br><span class="line">    public static void Foo(this Testt, intx) &#123; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
 
 <p>只能通过普通的静态调用来调用拓展方法：Extensions.Foo()；</p>
 
-        <h4 id="拓展方法和拓展方法"   >
+        <h4 id="拓展方法和拓展方法">
           <a href="#拓展方法和拓展方法" class="heading-link"><i class="fas fa-link"></i></a>拓展方法和拓展方法</h4>
       <p>如果两个扩展方法签名相同，则扩展方法必须作为一个普通的静态方法调用才能进行区分。当然，如果其中一个扩展方法具有更具体的参数，那么更具体参数的方法优先级更高。</p>
 
-        <h3 id="匿名类型"   >
+        <h3 id="匿名类型">
           <a href="#匿名类型" class="heading-link"><i class="fas fa-link"></i></a>匿名类型</h3>
       <ul>
 <li>匿名类型就是有编译器即时创建的一个class,它用来存储一组数据</li>
@@ -475,7 +475,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <li>匿名类型主要用来写LINQ查询</li>
 </ul>
 
-        <h3 id="元组（Tuple）"   >
+        <h3 id="元组（Tuple）">
           <a href="#元组（Tuple）" class="heading-link"><i class="fas fa-link"></i></a>元组（Tuple）</h3>
       <ul>
 <li>Tuple提供了简单的方式来存储一组数据</li>
@@ -488,7 +488,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(string,int)bob &#x3D; (&quot;Bob&quot;,23);</span><br></pre></td></tr></table></div></figure>
 
 
-        <h4 id="元组元素命名"   >
+        <h4 id="元组元素命名">
           <a href="#元组元素命名" class="heading-link"><i class="fas fa-link"></i></a>元组元素命名</h4>
       <p>当创建元组字面量时，可以为元组的元素起一些有意义的名字：</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var tuple &#x3D; (Name:&quot;Bob&quot;,Age:23);</span><br></pre></td></tr></table></div></figure>
@@ -497,7 +497,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">static (string Name,int Age) GetPerson() &#x3D;&gt;(&quot;Bob&quot;,23);</span><br></pre></td></tr></table></div></figure>
 
 
-        <h4 id="类型擦除"   >
+        <h4 id="类型擦除">
           <a href="#类型擦除" class="heading-link"><i class="fas fa-link"></i></a>类型擦除</h4>
       <p>C#使用了一组现存的泛型struct来处理Tuple</p>
 <ul>
@@ -509,17 +509,17 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 </ul>
 <p>因此，(string, int)是ValueTuple&lt;string, int&gt;的别名。同时，这意味着命名的元组元素并没有底层类型的命名属性的支撑。这些名字仅仅存在于源代码和编译器的想象”中。在运行时，这些名字大多会消失。当我们反编译引用命名元素的元组时，可以看到程序仅仅引用了Item1、Item2这样的字段。若将元组变量赋值给一个obect对象并在调试器 下观察(或者在LINQPad下输出)，就可以发现元素的名字完全消失了。因此，在绝大多数情况下，都不能用反射(reflection) 的方式确定元组在运行时的命名。</p>
 
-        <h4 id="ValueTuple-Create"   >
+        <h4 id="ValueTuple-Create">
           <a href="#ValueTuple-Create" class="heading-link"><i class="fas fa-link"></i></a>ValueTuple.Create</h4>
       <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ValueTuple&lt;string int&gt; bob1 &#x3D; ValueTuple.Create(&quot;Bob&quot;, 23):</span><br><span class="line">(string.int)bob2 &#x3D; ValueTuple.Create (&quot;Bob&quot;: 23);</span><br></pre></td></tr></table></div></figure>
 
 
-        <h4 id="元组的解构"   >
+        <h4 id="元组的解构">
           <a href="#元组的解构" class="heading-link"><i class="fas fa-link"></i></a>元组的解构</h4>
       <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var bob &#x3D; (&quot;Bob&quot;,23);</span><br><span class="line">(string name,int age) &#x3D; bob;</span><br><span class="line">Console.WriteLine(name); &#x2F;&#x2F; Bob</span><br><span class="line">Console.WriteLine(age); &#x2F;&#x2F; 23</span><br></pre></td></tr></table></div></figure>
 
 
-        <h3 id="特性（Attribute"   >
+        <h3 id="特性（Attribute">
           <a href="#特性（Attribute" class="heading-link"><i class="fas fa-link"></i></a>特性（Attribute)</h3>
       <ul>
 <li>Attribute是一种扩展机制，它可以为代码元素添加自定义的信息<ul>
@@ -532,26 +532,26 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 </li>
 </ul>
 
-        <h4 id="特性类"   >
+        <h4 id="特性类">
           <a href="#特性类" class="heading-link"><i class="fas fa-link"></i></a>特性类</h4>
       <p>一个Attribute是通过一个（直接或间接）继承了System.Attribute的类来定义的</p>
 <p>把Attribute应用于代码元素</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[ObsoleteAttribute] &#x2F;&#x2F; 可省略为[Obsolete]</span><br><span class="line">public class Foo&#123;...&#125;</span><br></pre></td></tr></table></div></figure>
 
 
-        <h4 id="命名和位置Attribute参数"   >
+        <h4 id="命名和位置Attribute参数">
           <a href="#命名和位置Attribute参数" class="heading-link"><i class="fas fa-link"></i></a>命名和位置Attribute参数</h4>
       <p>Attribute 可以有参数</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[XmlElement ( &quot;Customer&quot;，Namespace&#x3D;&quot;http: &#x2F;&#x2F;oreilly. com&quot;)]</span><br><span class="line">public class CustomerEntity &#123; ... &#125;</span><br></pre></td></tr></table></div></figure>
 
 <p>Attribute的参数可以分为两类: 位置的和命名的<br>位置参数对应Attribute类型的公共构造函数的参数<br>命名参数对应Attribute类型的公共字段或公共属性<br>当指定Attribute的时候， 必须包含与Attribute相应构造函数所对应的位置参数，而命名参数是可选的。</p>
 
-        <h3 id="预处理指令（详见官方文档）"   >
+        <h3 id="预处理指令（详见官方文档）">
           <a href="#预处理指令（详见官方文档）" class="heading-link"><i class="fas fa-link"></i></a>预处理指令（详见官方文档）</h3>
       <p>预处理器指令向编译器提供有关代码区域的附加信息。<br>最常见的预处理器指令是条件指令，它提供了从编译中包含或排除代码区域的方法。<br>预处理器符号可以在源文件中定义，也可以通过设定/define:symbol命令行选项进行定义。</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#define DEBUG</span><br><span class="line">class MyClass</span><br><span class="line">&#123;</span><br><span class="line">    int x;</span><br><span class="line">    void Foo0()</span><br><span class="line">    &#123;</span><br><span class="line">        #if DEBUG</span><br><span class="line">        Console.WriteLine(&quot;Testing:x&#x3D; &#123;0&#125; &quot;, x);</span><br><span class="line">        #endif</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
 
-</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">Author: </span><span class="copyright-author__value"><a href="http://yoursite.com">Szwyz</a></span></div><div class="copyright-link"><span class="copyright-link__name">Link: </span><span class="copyright-link__value"><a href="http://yoursite.com/2020/07/08/CSharp2%EF%BC%88%E6%9C%AA%E5%AE%8C%EF%BC%89/">http://yoursite.com/2020/07/08/CSharp2%EF%BC%88%E6%9C%AA%E5%AE%8C%EF%BC%89/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">Copyright: </span><span class="copyright-notice__value">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><div class="post-reward reward"><div class="reward-button">Buy me a coffee</div><div class="reward-qrcode"><span class="reward-qrcode-alipay"><img class="reward-qrcode-alipay__img" src="/images/alipay.jpg"><div class="reward-qrcode-alipay__text">Alipay</div></span><span class="reward-qrcode-wechat"><img class="reward-qrcode-wechat__img" src="/images/wechart.png"><div class="reward-qrcode-wechat__text">Wechat</div></span></div></div><nav class="post-paginator paginator"><div class="paginator-next"><a class="paginator-next__link" href="/2020/07/05/Csharp/"><span class="paginator-prev__text">C#初阶</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#泛型"><span class="toc-number">1.</span> <span class="toc-text">
+</div><footer class="post-footer"><div class="post-ending ending"><div class="ending__text">------ END ------</div></div><div class="post-copyright copyright"><div class="copyright-author"><span class="copyright-author__name">Author: </span><span class="copyright-author__value"><a href="http://yoursite.com">Szwyz</a></span></div><div class="copyright-link"><span class="copyright-link__name">Link: </span><span class="copyright-link__value"><a href="http://yoursite.com/2020/07/08/CSharp2%EF%BC%88%E6%9C%AA%E5%AE%8C%EF%BC%89/">http://yoursite.com/2020/07/08/CSharp2%EF%BC%88%E6%9C%AA%E5%AE%8C%EF%BC%89/</a></span></div><div class="copyright-notice"><span class="copyright-notice__name">Copyright: </span><span class="copyright-notice__value">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="external nofollow" target="_blank">BY-NC-SA</a> unless stating additionally</span></div></div><div class="post-reward reward"><div class="reward-button">Buy me a coffee</div><div class="reward-qrcode"><span class="reward-qrcode-alipay"><img class="reward-qrcode-alipay__img" src="/images/alipay.jpg"><div class="reward-qrcode-alipay__text">Alipay</div></span><span class="reward-qrcode-wechat"><img class="reward-qrcode-wechat__img" src="/images/wechart.png"><div class="reward-qrcode-wechat__text">Wechat</div></span></div></div><nav class="post-paginator paginator"><div class="paginator-prev"><a class="paginator-prev__link" href="/2020/08/13/WPF/"><span class="paginator-prev__icon"><i class="fas fa-angle-left"></i></span><span class="paginator-prev__text">WPF</span></a></div><div class="paginator-next"><a class="paginator-next__link" href="/2020/07/05/Csharp/"><span class="paginator-prev__text">C#初阶</span><span class="paginator-next__icon"><i class="fas fa-angle-right"></i></span></a></div></nav></footer></div></div></div><div class="sidebar-wrap" id="sidebar-wrap"><aside class="sidebar" id="sidebar"><div class="sidebar-nav"><span class="sidebar-nav-toc current">Catalog</span><span class="sidebar-nav-ov">Overview</span></div><section class="sidebar-toc"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#泛型"><span class="toc-number">1.</span> <span class="toc-text">
           泛型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#泛型方法"><span class="toc-number">1.1.</span> <span class="toc-text">
           泛型方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#声明类型参数"><span class="toc-number">1.2.</span> <span class="toc-text">
           声明类型参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#typeof和未绑定泛型类型"><span class="toc-number">1.3.</span> <span class="toc-text">

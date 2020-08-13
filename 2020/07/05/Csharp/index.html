@@ -33,7 +33,7 @@ var CONFIG = {
 
 window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></head><body><div class="container" id="container"><header class="header" id="header"><div class="header-inner"><nav class="header-nav header-nav--fixed"><div class="header-nav-inner"><div class="header-nav-menubtn"><i class="fas fa-bars"></i></div><div class="header-nav-menu"><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/"><span class="header-nav-menu-item__icon"><i class="fas fa-home"></i></span><span class="header-nav-menu-item__text">Home</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/archives/"><span class="header-nav-menu-item__icon"><i class="fas fa-folder-open"></i></span><span class="header-nav-menu-item__text">Archives</span></a></div><div class="header-nav-menu-item"><a class="header-nav-menu-item__link" href="/categories/"><span class="header-nav-menu-item__icon"><i class="fas fa-layer-group"></i></span><span class="header-nav-menu-item__text">Categories</span></a></div></div><div class="header-nav-mode"><div class="mode"><div class="mode-track"><span class="mode-track-moon"></span><span class="mode-track-sun"></span></div><div class="mode-thumb"></div></div></div></div></nav><div class="header-banner"><div class="header-banner-info"><div class="header-banner-info__title">Szwyz's Blog</div><div class="header-banner-info__subtitle">蚍蜉撼树</div></div><div class="header-banner-arrow"><div class="header-banner-arrow__icon"><i class="fas fa-angle-down"></i></div></div></div></div></header><main class="main" id="main"><div class="main-inner"><div class="content-wrap" id="content-wrap"><div class="content" id="content"><!-- Just used to judge whether it is an article page--><div id="is-post"></div><div class="post"><header class="post-header"><h1 class="post-title">C#初阶</h1><div class="post-meta"><span class="post-meta-item post-meta-item--createtime"><span class="post-meta-item__icon"><i class="far fa-calendar-plus"></i></span><span class="post-meta-item__info">Created</span><span class="post-meta-item__value">2020-07-05</span></span><span class="post-meta-item post-meta-item--updatetime"><span class="post-meta-item__icon"><i class="far fa-calendar-check"></i></span><span class="post-meta-item__info">Updated</span><span class="post-meta-item__value">2020-07-05</span></span></div></header><div class="post-body"><p>[TOC]</p>
 
-        <h2 id="编译"   >
+        <h2 id="编译">
           <a href="#编译" class="heading-link"><i class="fas fa-link"></i></a>编译</h2>
       <ul>
 <li>C#编译器是把.cs结尾的源码文件编译成Assembly</li>
@@ -48,10 +48,10 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 
 
 
-        <h2 id="C-基础"   >
+        <h2 id="C-基础">
           <a href="#C-基础" class="heading-link"><i class="fas fa-link"></i></a>C#基础</h2>
       
-        <h3 id="转换"   >
+        <h3 id="转换">
           <a href="#转换" class="heading-link"><i class="fas fa-link"></i></a>转换</h3>
       <p>转换始终会根据一个已经存在的值创建一个新的值。转换可以是显式的或隐式的：隐式转换自动发生而显示转换需要强制转换。</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int x &#x3D; 12345;</span><br><span class="line">long y &#x3D;  x; &#x2F;&#x2F; 隐式转换</span><br><span class="line">short z &#x3D; (short)x; &#x2F;&#x2F; 显式转换</span><br></pre></td></tr></table></div></figure>
@@ -63,7 +63,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <li>信息在转换过程中可能有丢失</li>
 </ul>
 
-        <h3 id="位运算符"   >
+        <h3 id="位运算符">
           <a href="#位运算符" class="heading-link"><i class="fas fa-link"></i></a>位运算符</h3>
       <p>C#支持的位运算符有：</p>
 <ul>
@@ -75,34 +75,34 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <li>&gt;&gt; 按位右移</li>
 </ul>
 
-        <h3 id="ref修饰符"   >
+        <h3 id="ref修饰符">
           <a href="#ref修饰符" class="heading-link"><i class="fas fa-link"></i></a>ref修饰符</h3>
       <p>在C#中，若按引用传递参数则应使用ref参数修饰符。下面的例子中p和x指向同一块内存位置</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Test</span><br><span class="line">&#123;</span><br><span class="line">    static void Foo(ref int p)</span><br><span class="line">    &#123;</span><br><span class="line">        p &#x3D; p + 1;</span><br><span class="line">        Console.WriteLine(p);  &#x2F;&#x2F; 9</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    static void Main()</span><br><span class="line">    &#123;</span><br><span class="line">        int x &#x3D; 8;</span><br><span class="line">        Foo(ref x);</span><br><span class="line">        Console.WriteLine(x); &#x2F;&#x2F; 9</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
 
 
-        <h3 id="out修饰符"   >
+        <h3 id="out修饰符">
           <a href="#out修饰符" class="heading-link"><i class="fas fa-link"></i></a>out修饰符</h3>
       <p>out参数不需要再传入函数之前进行赋值，必须在函数结束之前赋值。</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">class Test</span><br><span class="line">&#123;</span><br><span class="line">    static void Split(string name, out string firstNames, out string lastName)</span><br><span class="line">    &#123;</span><br><span class="line">        int i &#x3D; name.LastIndexOf(&#39; &#39;);</span><br><span class="line">        firstNames &#x3D; name.Substring(0, i);</span><br><span class="line">        lastName &#x3D; name.Substring(i + 1);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    static void Main()</span><br><span class="line">    &#123;</span><br><span class="line">        string a, b;</span><br><span class="line">        Split(&quot;Stevie Ray Vaughan&quot;, out a, out b);</span><br><span class="line">        Console.WriteLine(a);</span><br><span class="line">        Console.WriteLine(b);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
 
 
-        <h3 id="params修饰符"   >
+        <h3 id="params修饰符">
           <a href="#params修饰符" class="heading-link"><i class="fas fa-link"></i></a>params修饰符</h3>
       <p>params参数修饰符只能修饰方法中的最后一个参数，它能够使方法接受任意数量的指定参数类型。参数类型必须声明为数组。</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">class Test</span><br><span class="line">&#123;</span><br><span class="line">    static int Sum(params int[] ints)</span><br><span class="line">    &#123;</span><br><span class="line">        int sum &#x3D; 0;</span><br><span class="line">        for (int i &#x3D; 0; i &lt; ints.Length; i++)</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">            sum +&#x3D; ints[i];</span><br><span class="line">        &#125;</span><br><span class="line">        return sum;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    static void Main()</span><br><span class="line">    &#123;</span><br><span class="line">        int total &#x3D; Sum(1, 2, 3, 4);</span><br><span class="line">        Console.WriteLine(total);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
 
 
-        <h3 id="null运算符"   >
+        <h3 id="null运算符">
           <a href="#null运算符" class="heading-link"><i class="fas fa-link"></i></a>null运算符</h3>
       <p><strong>nullh合并运算符</strong>意思是如果操作数不是null则结果为操作数，否则结果为一个默认的值</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string s1 &#x3D; null;</span><br><span class="line">string s2 &#x3D; s1 ?? &quot;nothing&quot;; &#x2F;&#x2F;如果左侧的表达式不是null则右侧的表达式将不会进行计算</span><br></pre></td></tr></table></div></figure>
 <p><strong>null条件运算符</strong>该运算符可以像标准的“.”运算符那样访问成员以及调用方法。当运算符的左侧为null时，该表达式的运算结果也是null而不会抛出NullReferenceException异常<br>string s = sb?.ToString();</p>
 
-        <h3 id="Null附加课程"   >
+        <h3 id="Null附加课程">
           <a href="#Null附加课程" class="heading-link"><i class="fas fa-link"></i></a>Null附加课程</h3>
       
-        <h4 id="可空值-类型"   >
+        <h4 id="可空值-类型">
           <a href="#可空值-类型" class="heading-link"><i class="fas fa-link"></i></a>可空值 类型</h4>
       <ul>
 <li>可空值类型是System.Nullable&lt;T&gt;这个struct的实例</li>
@@ -112,7 +112,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">static void Main(string[] args)</span><br><span class="line">	&#123;</span><br><span class="line">    	string str &#x3D; &quot;dsafdsafdsfsd&quot;;</span><br><span class="line">        int? indexOfM &#x3D; null; &#x2F;&#x2F; 可空类型</span><br><span class="line">        Nullable&lt;int&gt; indexOFM &#x3D; null; &#x2F;&#x2F; 相当于这个</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></div></figure>
 
 
-        <h4 id="Null和空，空白string"   >
+        <h4 id="Null和空，空白string">
           <a href="#Null和空，空白string" class="heading-link"><i class="fas fa-link"></i></a>Null和空，空白string</h4>
       <ul>
 <li>string name = “Nick”;</li>
@@ -141,14 +141,14 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">static void Main(string[] args)</span><br><span class="line">    &#123;</span><br><span class="line">        &#123;</span><br><span class="line">            int i &#x3D; 3;</span><br><span class="line">            int? j &#x3D; i; &#x2F;&#x2F; 隐式转换</span><br><span class="line">            Console.WriteLine(j);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &#123;</span><br><span class="line">            int? i &#x3D; 3;</span><br><span class="line">            int j &#x3D; (int)i; &#x2F;&#x2F; 显式转换</span><br><span class="line">            Console.WriteLine(j);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></div></figure>
 
 
-        <h3 id="foreach循环"   >
+        <h3 id="foreach循环">
           <a href="#foreach循环" class="heading-link"><i class="fas fa-link"></i></a>foreach循环</h3>
       <p>foreach语句遍历可枚举对象的每一个元素。</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">foreach (char c in &quot;beer&quot;)</span><br><span class="line">	Console.WriteLine(c);</span><br></pre></td></tr></table></div></figure>
 
 
 
-        <h2 id="在C-中创建类型"   >
+        <h2 id="在C-中创建类型">
           <a href="#在C-中创建类型" class="heading-link"><i class="fas fa-link"></i></a>在C#中创建类型</h2>
       <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">class YourClassName</span><br><span class="line">&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
 
@@ -186,26 +186,26 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <li>异步代码修饰符：async</li>
 </ul>
 
-        <h3 id="expression-bodied方法（C-6"   >
+        <h3 id="expression-bodied方法（C-6">
           <a href="#expression-bodied方法（C-6" class="heading-link"><i class="fas fa-link"></i></a>expression-bodied方法（C#6)</h3>
       <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">int Foo(int x) &#123; return x * 2; &#125; &#x2F;&#x2F;仅由一个表达式构成的方法</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;可用双箭头来却带花括号和return</span><br><span class="line">int Foo(int x) &#x3D;&gt; x*2;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;void返回类型也可支持</span><br><span class="line">void Foo(int x) &#x3D;&gt; Console.WriteLine(x);</span><br></pre></td></tr></table></div></figure>
 
 
 
 
-        <h3 id="按值传递和按引用传递"   >
+        <h3 id="按值传递和按引用传递">
           <a href="#按值传递和按引用传递" class="heading-link"><i class="fas fa-link"></i></a>按值传递和按引用传递</h3>
       <p>参数按值传递还是按引用传递也是方法签名的一部分。例如Foo(int)和Foo(ref int)或者Foo(out int)可以出现在一个类中。但是Foo(ref int)和Foo(out int)不能同时出现在一个类中。</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">void Foo(int x)&#123;...&#125;</span><br><span class="line">void Foo(ref int x)&#123;...&#125; &#x2F;&#x2F; OK so far</span><br><span class="line">void Foo(out int x)&#123;...&#125; &#x2F;&#x2F; Compile-time error</span><br></pre></td></tr></table></div></figure>
 
 
 
-        <h3 id="局部方法（C-7）"   >
+        <h3 id="局部方法（C-7）">
           <a href="#局部方法（C-7）" class="heading-link"><i class="fas fa-link"></i></a>局部方法（C#7）</h3>
       <p>C#7开始允许一个方法中定义另外一个方法。局部方法不能用static修饰</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">void WriteCubes()</span><br><span class="line">&#123;</span><br><span class="line">	Console.WriteLine(Cube(3));</span><br><span class="line">	</span><br><span class="line">	int Cube(int value) &#x3D;&gt; value*value*value;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
 
-        <h3 id="实例构造器（构造函数）"   >
+        <h3 id="实例构造器（构造函数）">
           <a href="#实例构造器（构造函数）" class="heading-link"><i class="fas fa-link"></i></a>实例构造器（构造函数）</h3>
       <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class Panda</span><br><span class="line">&#123;</span><br><span class="line">	string name;</span><br><span class="line">	public Panda(string n) &#x2F;&#x2F; 构造器名和返回值只能和封装类的类型相同</span><br><span class="line">	&#123;</span><br><span class="line">		name &#x3D; n;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Panda p &#x3D; new Panda(&quot;petey&quot;);</span><br></pre></td></tr></table></div></figure>
 <p>实例构造器支持一下的修饰符：</p>
@@ -219,7 +219,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class Class1</span><br><span class="line">&#123;</span><br><span class="line">	Class1()&#123;&#125; &#x2F;&#x2F; private constructro</span><br><span class="line">	public static Class1 Create(...)&#123;...&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
 
 
-        <h3 id="解构器（析构函数）"   >
+        <h3 id="解构器（析构函数）">
           <a href="#解构器（析构函数）" class="heading-link"><i class="fas fa-link"></i></a>解构器（析构函数）</h3>
       <p>解析方法的名字必须是Deconstruct,并且拥有一个或多个out参数。</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Rectangle</span><br><span class="line">&#123;</span><br><span class="line">    public readonly float Width, Height;</span><br><span class="line">    public Rectangle(float width, float height)</span><br><span class="line">    &#123;</span><br><span class="line">        Width &#x3D; width;</span><br><span class="line">        Height &#x3D; height;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void Deconstruct(out float width, out float height)</span><br><span class="line">    &#123;</span><br><span class="line">        width &#x3D; Width;</span><br><span class="line">        height &#x3D; Height;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
@@ -227,20 +227,20 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var rect &#x3D; new Rectangle(3, 4);</span><br><span class="line">(float width, float height) &#x3D; rect; &#x2F;&#x2F; Deconstruction</span><br><span class="line">System.Console.WriteLine(width + &quot; &quot; + height);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 相当于</span><br><span class="line">float width,height;</span><br><span class="line">rec.Deconstruct(out width,out height);</span><br></pre></td></tr></table></div></figure>
 
 
-        <h3 id="对象初始化"   >
+        <h3 id="对象初始化">
           <a href="#对象初始化" class="heading-link"><i class="fas fa-link"></i></a>对象初始化</h3>
       <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public class Bunny</span><br><span class="line">&#123;</span><br><span class="line">    public string Name;</span><br><span class="line">    public bool LikesCarrots;</span><br><span class="line">    public bool LikesHumans;</span><br><span class="line"></span><br><span class="line">    public Bunny() &#123; &#125;</span><br><span class="line">    public Bunny(string n) &#x3D;&gt; name &#x3D; n;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 初始化</span><br><span class="line">Bunny b1 &#x3D; new Bunny&#123;Name&#x3D;&quot;bo&quot;,LikesCarrots&#x3D;true,LikesHumans&#x3D;false&#125;;</span><br><span class="line">Bunny b2 &#x3D; new Bunny(&quot;bo&quot;) &#123; LikesCarrots&#x3D;true,LikesHumans&#x3D;false&#125;;</span><br></pre></td></tr></table></div></figure>
 <p><strong>以上构造b1和b2的代码等价于：</strong></p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Bunny temp1 &#x3D; new Bunny();</span><br><span class="line"></span><br><span class="line">temp1.Name &#x3D; &quot;bo&quot;;</span><br><span class="line">temp1.LikesCarrots &#x3D; true;</span><br><span class="line">temp1.LikesHumans &#x3D; false;</span><br><span class="line">Bunny b1 &#x3D; temp1;</span><br><span class="line"></span><br><span class="line">Bunny temp2 &#x3D; new Bunny(&quot;bo&quot;);</span><br><span class="line">temp2.LikesCarrots &#x3D; true;</span><br><span class="line">temp2.LikesHumans &#x3D; false;</span><br><span class="line">Bunny b2 &#x3D; temp2;</span><br></pre></td></tr></table></div></figure>
 <p>使用临时变量是为了确保在初始化过程中如果抛出异常，则不会得到一个部分初始化的对象。</p>
 
-        <h3 id="this引用"   >
+        <h3 id="this引用">
           <a href="#this引用" class="heading-link"><i class="fas fa-link"></i></a>this引用</h3>
       <p>this引用指代示例本身。this引用仅在类或结构体的非静态成员中有效。</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; Marry方法将partner的mate字段设定为this</span><br><span class="line">public class Panda</span><br><span class="line">&#123;</span><br><span class="line">	public Panda Mate;</span><br><span class="line">	</span><br><span class="line">	public void Marry(Panda partner)</span><br><span class="line">	&#123;	</span><br><span class="line">		Mate &#x3D; partner;</span><br><span class="line">		partner.Mate &#x3D; this;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
 
 
-        <h3 id="属性"   >
+        <h3 id="属性">
           <a href="#属性" class="heading-link"><i class="fas fa-link"></i></a>属性</h3>
       <p>属性和字段很类似，但是属性内部像方法一样含有逻辑。属性和字段的声明很类似，但是属性比字段多了get/set代码块。如果只定义了get访问器，属性就是只读的。如果只定义了set访问器，那么属性就是只写的（很少使用只写）。</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class Stock</span><br><span class="line">&#123;</span><br><span class="line">	decimal currentPrice;</span><br><span class="line">	</span><br><span class="line">	public decimal CurrentPrice</span><br><span class="line">	&#123;</span><br><span class="line">		get &#123; return currentPrice;&#125; </span><br><span class="line">		set &#123; currentPrice &#x3D; value;&#125; &#x2F;&#x2F; get和set是属性的访问器</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
@@ -268,7 +268,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class Foo</span><br><span class="line">&#123;</span><br><span class="line">    private decimal x;</span><br><span class="line">    public decimal X</span><br><span class="line">    &#123;</span><br><span class="line">        get&#123;return x;&#125;</span><br><span class="line">        private set &#123; x &#x3D; Math.Round(value,2);&#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
 
 
-        <h3 id="索引器"   >
+        <h3 id="索引器">
           <a href="#索引器" class="heading-link"><i class="fas fa-link"></i></a>索引器</h3>
       <p>索引器提供了一种可以访问封装了列表值或字典值的class/struct的元素的语法。语法很像使用数组时的语法，但是这里的索引参数可以是任意类型的。</p>
 <p><strong>实现索引器：</strong>需要定义一个this属性，并通过中括号指定参数</p>
@@ -278,23 +278,23 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <p>如果省略set访问器，则该索引器就是只读的，并且可以使用C#6的Expression-bodied来简化定义</p>
 <p>public string this[int wordNum] =&gt; words[wordNum];</p>
 
-        <h3 id="常量"   >
+        <h3 id="常量">
           <a href="#常量" class="heading-link"><i class="fas fa-link"></i></a>常量</h3>
       <p>一个值不可以改变的静态字段 const关键字声明，声明时必须有初始值。</p>
-<p><font color=red>注意：</font></p>
+<p><font color="red">注意：</font></p>
 <p>与const不同的是，static readonly字段的好处在于当提供给别的程序集时，可以在后续版本中更新其数值。假设程序集X提供了一个如下的常量：</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public const decimal ProgramVersion &#x3D; 2.3;</span><br></pre></td></tr></table></div></figure>
 
 <p>如果程序集Y引用了程序集X并使用了这个常量，那么值2.3将在编译时固定在程序集Y中。这意味着如果X后来重新编译将其值更改为2.4，那么Y仍将使用旧值2.3直至Y重新编译。而static readonly字段则不存在这个问题。</p>
 
-        <h3 id="静态构造器（静态构造函数）"   >
+        <h3 id="静态构造器（静态构造函数）">
           <a href="#静态构造器（静态构造函数）" class="heading-link"><i class="fas fa-link"></i></a>静态构造器（静态构造函数）</h3>
       <p>每个类型的静态构造器只会执行一次，而不是每个实例执行一次。一个类型只能定义一个静态  构造器，名称必须和类名同名，且没有参数。在类型使用之前的一瞬间，编译器会自动调用类型的静态构造函数：实例化一个类型或者访问类型的一个静态成员。<br>静态构造器只支持两种修饰符：unsafe和extern</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">class Test</span><br><span class="line">&#123;</span><br><span class="line">	static Test() &#123; Console.WriteLine(&quot;Type Initialized&quot;);&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
 
 <p><strong>静态类：</strong>标记为static，其成员必须全是静态的，不可以有子类。比如System.Console和System.Math</p>
 
-        <h3 id="终结器"   >
+        <h3 id="终结器">
           <a href="#终结器" class="heading-link"><i class="fas fa-link"></i></a>终结器</h3>
       <p>Finalizer是class专有的一种方法，在GC回收未引用对象的内存之前运行。</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class Class1</span><br><span class="line">&#123;</span><br><span class="line">    ~Class1</span><br><span class="line">    &#123;</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
@@ -304,7 +304,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 
 <p>C#7可以这么写 ~Class1() =&gt; Console.WriteLine(“Finalizing”);</p>
 
-        <h3 id="局部-分布类型"   >
+        <h3 id="局部-分布类型">
           <a href="#局部-分布类型" class="heading-link"><i class="fas fa-link"></i></a>局部/分布类型</h3>
       <ul>
 <li><p>允许一个类型的定义分布在多个地方（文件）</p>
@@ -324,12 +324,12 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <li>partial method 必须是void，并且隐式private的</li>
 </ul>
 
-        <h3 id="nameof运算符"   >
+        <h3 id="nameof运算符">
           <a href="#nameof运算符" class="heading-link"><i class="fas fa-link"></i></a>nameof运算符</h3>
       <p>返回任何符号（类型、成员、变量…）的名字（string） 利于重构</p>
 <p>String name = nameof (count);</p>
 
-        <h3 id="类型转换和引用转换"   >
+        <h3 id="类型转换和引用转换">
           <a href="#类型转换和引用转换" class="heading-link"><i class="fas fa-link"></i></a>类型转换和引用转换</h3>
       <ul>
 <li>一个对象的引用可以隐式的转换到其父类的引用（向上转换）</li>
@@ -353,7 +353,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <p>C#7里，在使用is操作符的时候，可以引用一个变量</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if (a is Stock s) &#x2F;&#x2F; 如果a是stock类型，那么就将a赋值为s</span><br><span class="line">	Console.WriteLine(s.SharesOwned);</span><br></pre></td></tr></table></div></figure>
 
-        <h3 id="Virtual函数成员"   >
+        <h3 id="Virtual函数成员">
           <a href="#Virtual函数成员" class="heading-link"><i class="fas fa-link"></i></a>Virtual函数成员</h3>
       <p>标记为virtual的函数可以被子类重写，包括方法、属性、索引器、事件</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class Asset</span><br><span class="line">&#123;</span><br><span class="line">	public string Name;</span><br><span class="line">	public virtual decimal Liability &#x3D;&gt; 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
@@ -361,7 +361,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class House:Asset</span><br><span class="line">&#123;</span><br><span class="line">	public decimal Mortgage;</span><br><span class="line">	public override decimal Liability &#x3D;&gt; Mortgage;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
 <p>virtual方法和重写方法的签名、返回类型、可访问程度必须是一样的。重写方法里使用base关键字可以调用父类的实现。</p>
 
-        <h3 id="抽象类和抽象成员"   >
+        <h3 id="抽象类和抽象成员">
           <a href="#抽象类和抽象成员" class="heading-link"><i class="fas fa-link"></i></a>抽象类和抽象成员</h3>
       <ul>
 <li>使用abstract声明的类是抽象类</li>
@@ -379,7 +379,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public class House : Asset</span><br><span class="line">&#123;</span><br><span class="line">	public override decimal Liability &#x3D;&gt; base.Liability + Mortgage;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
 
 
-        <h3 id="构造函数和继承"   >
+        <h3 id="构造函数和继承">
           <a href="#构造函数和继承" class="heading-link"><i class="fas fa-link"></i></a>构造函数和继承</h3>
       <ul>
 <li>子类必须声明自己的构造函数</li>
@@ -392,7 +392,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public class Subclass : Baseclass</span><br><span class="line">&#123;</span><br><span class="line">    public Subclass(int x) : base(x) &#123; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
 <p>如果子类的构造函数里没有使用base关键字，那么父类的无参构造函数会被隐式的调用，如果父类没有无参构造函数，那么子类就必须在构造函数里使用base关键字</p>
 
-        <h3 id="object类型"   >
+        <h3 id="object类型">
           <a href="#object类型" class="heading-link"><i class="fas fa-link"></i></a>object类型</h3>
       <p>object（System.Object）是所有类型的终极父类。所有类型都可以向上转换为object</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">public class Stack &#x2F;&#x2F; 一个可以容纳10个对象的栈的实现</span><br><span class="line">&#123;</span><br><span class="line">    int position;</span><br><span class="line">    object[] data &#x3D; new object[10];</span><br><span class="line">    public void Push(object obj) &#123; data[position] &#x3D; obj; &#125;</span><br><span class="line">    public object Pop() &#123; return data[--position]; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
@@ -401,14 +401,14 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Stack stack &#x3D; new Stack();</span><br><span class="line">stack.Push(&quot;sausage&quot;);</span><br><span class="line">string s &#x3D; (string)stack.Pop();</span><br><span class="line">Console.WriteLine(s);</span><br></pre></td></tr></table></div></figure>
 
 
-        <h3 id="装箱和拆箱"   >
+        <h3 id="装箱和拆箱">
           <a href="#装箱和拆箱" class="heading-link"><i class="fas fa-link"></i></a>装箱和拆箱</h3>
       <p>装箱是将值类型实例转换为引用类型实例的行为。</p>
 <p>拆箱正好相反，把那个对象转化为原来的值类型，需要显式的转换</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int x &#x3D; 9;</span><br><span class="line">object obj &#x3D; x; &#x2F;&#x2F; Box the int</span><br><span class="line"></span><br><span class="line">int y &#x3D; (int)obj; &#x2F;&#x2F; Unbox the int</span><br></pre></td></tr></table></div></figure>
 
 
-        <h3 id="GetType和typeof运算符"   >
+        <h3 id="GetType和typeof运算符">
           <a href="#GetType和typeof运算符" class="heading-link"><i class="fas fa-link"></i></a>GetType和typeof运算符</h3>
       <ul>
 <li>所有C#的类型在运行时都是以System.Type的实例来展现的</li>
@@ -423,7 +423,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">using System;</span><br><span class="line"></span><br><span class="line">public class Point&#123;public int X,Y;&#125;</span><br><span class="line"></span><br><span class="line">class Test</span><br><span class="line">&#123;</span><br><span class="line">    static void Main()</span><br><span class="line">    &#123;</span><br><span class="line">        Point p &#x3D; new Point();</span><br><span class="line">        Console.WriteLine(p.GetType().Name); &#x2F;&#x2F; point</span><br><span class="line">        Console.WriteLine(typeof(Point).Name); &#x2F;&#x2F; point</span><br><span class="line">        Console.WriteLine(p.X.GetType().Name); &#x2F;&#x2F; Int32</span><br><span class="line">        Console.WriteLine(p.Y.GetType().FullName); &#x2F;&#x2F; System.Int32</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
 
 
-        <h3 id="结构体"   >
+        <h3 id="结构体">
           <a href="#结构体" class="heading-link"><i class="fas fa-link"></i></a>结构体</h3>
       <p><strong>结构体的构建：</strong></p>
 <ul>
@@ -434,7 +434,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 错误的例子</span><br><span class="line">public struct Point</span><br><span class="line">&#123;</span><br><span class="line">    int x &#x3D; 1; &#x2F;&#x2F; 不可有初始化器</span><br><span class="line">    int y;</span><br><span class="line">    public Point() &#123;&#125; &#x2F;&#x2F; 不可以写无参的构造函数</span><br><span class="line">    public Point(int x ) &#123;this.x &#x3D; x;&#125; &#x2F;&#x2F; 没有对y进行初始化</span><br><span class="line">&#125;</span><br></pre></td></tr></table></div></figure>
 
 
-        <h3 id="访问权限修饰符"   >
+        <h3 id="访问权限修饰符">
           <a href="#访问权限修饰符" class="heading-link"><i class="fas fa-link"></i></a>访问权限修饰符</h3>
       <ul>
 <li>public，完全可访问。枚举类型的成员和接口的成员默认都是这个级别</li>
@@ -444,13 +444,13 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <li>protected internal，联合了protected和internal的访问级别</li>
 </ul>
 
-        <h3 id="友元程序集"   >
+        <h3 id="友元程序集">
           <a href="#友元程序集" class="heading-link"><i class="fas fa-link"></i></a>友元程序集</h3>
       <p>通过添加System.Runtime.CompilerServices.InternalsVisibleTo这个Assembly的属性，并指定朋友Assembly的名字，就可以把internal的成员暴露给朋友Assembly</p>
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[assembly: InternalsVisibleTo(&quot;Friend&quot;)]</span><br></pre></td></tr></table></div></figure>
 
 
-        <h3 id="接口"   >
+        <h3 id="接口">
           <a href="#接口" class="heading-link"><i class="fas fa-link"></i></a>接口</h3>
       <ul>
 <li>接口与class类似，但是它只为其成员提供了规格，而没有提供具体的实现</li>
@@ -502,7 +502,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 
 
 
-        <h3 id="枚举和嵌套类型"   >
+        <h3 id="枚举和嵌套类型">
           <a href="#枚举和嵌套类型" class="heading-link"><i class="fas fa-link"></i></a>枚举和嵌套类型</h3>
       <p>枚举一个特殊的值类型，可以指定一组命名的数值常量。</p>
 <ul>
@@ -522,7 +522,7 @@ window.CONFIG = CONFIG;</script><meta name="generator" content="Hexo 4.2.1"></he
 <figure class="highlight plain"><div class="table-container"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int i &#x3D; (int) BorderSide.Left;</span><br><span class="line">BorderSide side &#x3D; (BorderSide)i;</span><br></pre></td></tr></table></div></figure>
 
 
-        <h3 id="嵌套类型"   >
+        <h3 id="嵌套类型">
           <a href="#嵌套类型" class="heading-link"><i class="fas fa-link"></i></a>嵌套类型</h3>
       <p>嵌套类型是声明在另一个类型内部的类型。</p>
 <ul>
